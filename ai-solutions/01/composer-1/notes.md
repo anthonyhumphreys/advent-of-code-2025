@@ -1,3 +1,5 @@
+Tokens used: 462.9K
+
 - Composer one-shotted the solution
 - Installed deps in root of repo not in composer folder so intervened there and ran npm init, otherwise no intervention
 - Attempted to read the human solution but was prevented by cursorignore

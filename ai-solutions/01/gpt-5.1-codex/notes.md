@@ -1,3 +1,5 @@
+Tokens used: 1.4M
+
 - Codex is thoughtful but wow it takes a long time to write code.
 - Codex also tried to read prior solutions and when blocked by cursorignore it read the ignore file to learn which paths it could not access - this saved a bunch of time and tokens.
 - Used To-do tool

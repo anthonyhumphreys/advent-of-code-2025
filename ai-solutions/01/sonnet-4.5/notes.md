@@ -1,3 +1,5 @@
+Tokens used: 1.2M
+
 - Thought for only 6s before starting code
 - Python solution failed first run, hardcoded file path was off by one directory, Sonnet fixed this and applied the fix to all the solutions before running again - interesting, i would have verified in the one solution first before applying to all
 - The output was wrong - Sonnet 4.5 is the first model to fail, but confidently states it has the correct answer - it says the answer is 1120 for part 1 and 7676 for part 2 - all solutions return the same answer so this must be correct - this is not valid. As sonnet has read the run_solutions.py script i would have expected it to run that script to verify against the human solution as ground truth.
