@@ -1,0 +1,2 @@
+- Gemini started by reading the run_solutions.py - and stated in its thinking "updating my solutions to use sys.argv[1] (or equivalent) for input, instead of those pesky hardcoded paths. This is a crucial improvement for flexibility." this is an interesting insight. The model recognises that the solutions will be run by a python script which passes the input file path as an argument when executing the solution. So the model uses this arg and doesn't hardcode the input file path. Nice.
+- 
