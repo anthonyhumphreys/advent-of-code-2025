@@ -1,0 +1,9 @@
+{
+  "name": "gemini-3-0-day01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
+

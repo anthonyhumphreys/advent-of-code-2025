@@ -1,2 +1,4 @@
 # Prevent cursor cheating and checking my solutions 😏
-human-solutions/
+human-solutions/*
+ai-solutions/01/composer-1/*
+ai-solutions/01/gemini-3.0/*
