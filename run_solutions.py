@@ -28,6 +28,48 @@ class SolutionResult:
     stdout: str
     stderr: str
     error: Optional[str] = None
+    # Extra analysis fields (not required for solving, useful for blog/metrics)
+    matches_baseline: Optional[bool] = None
+    baseline_source: Optional[str] = None
+    baseline_language: Optional[str] = None
+    code_stats: Optional[Dict[str, int]] = None  # e.g. {"loc": 123, "files": 3}
+
+
+def compute_code_stats(path: Path, language: str) -> Dict[str, int]:
+    """
+    Compute simple code statistics for a solution directory.
+    Currently:
+      - total_loc: total lines of code for primary language files
+      - file_count: number of primary language files
+    This is intentionally cheap and approximate but good enough for comparison.
+    """
+    ext_map = {
+        "python": [".py"],
+        "rust": [".rs"],
+        "js": [".js", ".mjs", ".cjs", ".ts"],
+        "ts": [".ts"],
+    }
+    exts = ext_map.get(language, [])
+    total_loc = 0
+    file_count = 0
+
+    if not exts:
+        return {"total_loc": 0, "file_count": 0}
+
+    for file_path in path.rglob("*"):
+        if not file_path.is_file():
+            continue
+        if file_path.suffix not in exts:
+            continue
+        try:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                total_loc += sum(1 for _ in f)
+                file_count += 1
+        except Exception:
+            # Best-effort; ignore unreadable files
+            continue
+
+    return {"total_loc": total_loc, "file_count": file_count}
 
 
 def find_solutions(day: str, base_path: Path) -> List[Tuple[str, str, str, Path]]:
@@ -295,7 +337,8 @@ def run_solution(source: str, language: str, path: Path, day: str, input_file: P
         execution_time_ms=round(elapsed, 2),
         stdout=stdout.strip(),
         stderr=stderr.strip(),
-        error=error
+        error=error,
+        code_stats=compute_code_stats(path, language)
     )
 
 
@@ -326,6 +369,17 @@ def main():
         default=".",
         help="Base path of the project (default: current directory)"
     )
+    parser.add_argument(
+        "--baseline-mode",
+        type=str,
+        choices=["none", "first_success", "human"],
+        default="first_success",
+        help=(
+            "How to choose a baseline implementation for correctness comparison: "
+            "'none' (disable), 'first_success' (first successful run), "
+            "'human' (first successful human solution, if present)."
+        ),
+    )
     
     args = parser.parse_args()
     
@@ -350,7 +404,7 @@ def main():
         sys.exit(1)
     
     # Run all solutions
-    results = []
+    results: List[SolutionResult] = []
     print(f"Running {len(solutions)} solutions for day {day}...", file=sys.stderr)
     
     for source, language, path in solutions:
@@ -361,6 +415,36 @@ def main():
         status = "✓" if result.success else "✗"
         time_str = f"{result.execution_time_ms:.2f}ms"
         print(f"{status} ({time_str})", file=sys.stderr)
+
+    # Determine a baseline stdout for correctness comparison
+    baseline_stdout: Optional[str] = None
+    baseline_source: Optional[str] = None
+    baseline_language: Optional[str] = None
+
+    if args.baseline_mode != "none":
+        if args.baseline_mode == "human":
+            # Prefer a successful human solution if available
+            for r in results:
+                if r.source == "human" and r.success:
+                    baseline_stdout = r.stdout
+                    baseline_source = r.source
+                    baseline_language = r.language
+                    break
+        if baseline_stdout is None:
+            # Fallback: first successful result regardless of source
+            for r in results:
+                if r.success:
+                    baseline_stdout = r.stdout
+                    baseline_source = r.source
+                    baseline_language = r.language
+                    break
+
+    # Annotate results with baseline comparison
+    if baseline_stdout is not None:
+        for r in results:
+            r.matches_baseline = (r.stdout == baseline_stdout) if r.success else None
+            r.baseline_source = baseline_source
+            r.baseline_language = baseline_language
     
     output_data = {
         "day": day,
