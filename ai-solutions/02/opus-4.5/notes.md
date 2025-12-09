@@ -1,4 +1,4 @@
-Tokens used: 156.3K
+Tokens used: 156.3K + 186.3K
 - opus once again one shotted
 - initial issue with path in rust but it corrected it
 - curiously - had an issue with paths after creation.
