@@ -1,0 +1,9 @@
+{
+  "name": "aoc-2025-day02",
+  "version": "1.0.0",
+  "description": "Advent of Code 2025 - Day 2 Solution",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}

@@ -1,3 +1,5 @@
+Tokens used: 173K
+
 - Gemini one-shotted the solution
 - ran each solution individually and compared the results again
 - used todo tool
