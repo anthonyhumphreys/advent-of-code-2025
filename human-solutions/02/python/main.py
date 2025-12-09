@@ -1,3 +1,4 @@
+# This seems to have been added by an extension - typed python seems like witchcraft
 from typing import Any
 
 
