@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const input = fs.readFileSync('inputs/03.txt', 'utf-8').trim().split('\n');
+const input = fs.readFileSync('../../../../inputs/03.txt', 'utf-8').trim().split('\n');
 
 // Function to find the maximum number by selecting exactly k digits from a string
 function maxJoltage(bank, k) {

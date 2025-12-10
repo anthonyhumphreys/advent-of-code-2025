@@ -25,7 +25,7 @@ def max_joltage(bank: str, k: int) -> int:
 
 
 def main():
-    with open('inputs/03.txt', 'r') as f:
+    with open('../../../../inputs/03.txt', 'r') as f:
         banks = f.read().strip().split('\n')
     
     # Part 1: Select 2 batteries from each bank

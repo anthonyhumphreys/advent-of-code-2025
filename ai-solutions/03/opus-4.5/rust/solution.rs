@@ -32,7 +32,7 @@ fn max_joltage(bank: &str, k: usize) -> u128 {
 }
 
 fn main() {
-    let input = fs::read_to_string("inputs/03.txt").expect("Failed to read input file");
+    let input = fs::read_to_string("../../../../inputs/03.txt").expect("Failed to read input file");
     let banks: Vec<&str> = input.trim().lines().collect();
     
     // Part 1: Select 2 batteries from each bank
