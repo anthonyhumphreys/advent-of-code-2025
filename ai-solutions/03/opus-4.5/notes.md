@@ -1,0 +1,2 @@
+- Opus 4.5 one shotted
+- didn't name the solutions per convention
