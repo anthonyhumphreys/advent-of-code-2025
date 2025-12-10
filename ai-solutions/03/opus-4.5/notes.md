@@ -1,3 +1,0 @@
-- Opus 4.5 one shotted
-- Used cargo for rust
-- named the solutions per convention

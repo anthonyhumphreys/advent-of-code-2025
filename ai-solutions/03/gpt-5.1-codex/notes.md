@@ -1,3 +1,5 @@
+Tokens used: 422K
+
 - One shotted
 - Used cargo for rust
 - naming everything 'solution' again
