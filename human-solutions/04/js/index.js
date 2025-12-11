@@ -16,7 +16,6 @@ function findAccessibleRolls(grid) {
   ];
 
   let accessibleCount = 0;
-  const debugGrid = grid.map(row => row.split(""));
 
   // Check each cell in the grid
   for (let r = 0; r < rows; r++) {
@@ -39,17 +38,13 @@ function findAccessibleRolls(grid) {
       // Accessible if less than 4 neighbours are rolls
       if (neighbourRolls < 4) {
         accessibleCount++;
-        debugGrid[r][c] = "x"; // Mark accessible rolls in debug grid
       }
     }
   }
 
-  return {
-    accessibleCount,
-    debugGrid: debugGrid.map(row => row.join("")),
-  };
+  return accessibleCount;
 }
 
-const { accessibleCount, debugGrid } = findAccessibleRolls(grid);
+const accessibleCount = findAccessibleRolls(grid);
 
 console.log(accessibleCount);
