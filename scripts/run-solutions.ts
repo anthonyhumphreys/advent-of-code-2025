@@ -323,6 +323,18 @@ async function ensureJsDeps(solutionRoot: string, timeoutMs: number) {
   await execCommand({ cmd, args, cwd: solutionRoot, timeoutMs });
 }
 
+function looksLikeCommonJs(entrySource: string) {
+  // Heuristic only: many AI solutions use `require(...)` but live under a repo-level `"type": "module"`,
+  // so Node treats `.js` as ESM and crashes with "require is not defined".
+  //
+  // We only want to flip to CJS if it really looks like CJS.
+  return (
+    /\brequire\s*\(/.test(entrySource) ||
+    /\bmodule\.exports\b/.test(entrySource) ||
+    /\bexports\.[A-Za-z_$][\w$]*\b/.test(entrySource)
+  );
+}
+
 async function runOneSolution(opts: {
   repoRoot: string;
   sol: Solution;
@@ -366,12 +378,56 @@ async function runOneSolution(opts: {
     } else if (opts.sol.language === "js") {
       await ensureJsDeps(opts.sol.rootDir, Math.min(opts.timeoutMs, 120_000));
       const entry = entryHint ? path.join(opts.sol.rootDir, entryHint) : path.join(opts.sol.rootDir, "index.js");
-      exec = await execCommand({
-        cmd: "node",
-        args: [entry, path.resolve(opts.inputPath)],
-        cwd: opts.sol.rootDir,
-        timeoutMs: opts.timeoutMs,
-      });
+      const ext = path.extname(entry).toLowerCase();
+
+      // If this solution is TS/TSX, run it with Bun (Node won't execute it without a loader).
+      if (ext === ".ts" || ext === ".tsx") {
+        exec = await execCommand({
+          cmd: "bun",
+          args: [entry, path.resolve(opts.inputPath)],
+          cwd: opts.sol.rootDir,
+          timeoutMs: opts.timeoutMs,
+        });
+      } else if (ext === ".js") {
+        // Repo is ESM (`"type":"module"`), so `.js` is ESM by default. If the entry looks like CJS,
+        // run a temporary `.cjs` copy to avoid modifying the actual solution.
+        let entrySource = "";
+        try {
+          entrySource = await fsp.readFile(entry, "utf8");
+        } catch {
+          entrySource = "";
+        }
+
+        if (entrySource && looksLikeCommonJs(entrySource)) {
+          const tmpCjs = path.join(opts.sol.rootDir, `.tmp-bench-${opts.sol.id}.cjs`);
+          try {
+            await fsp.writeFile(tmpCjs, entrySource, "utf8");
+            exec = await execCommand({
+              cmd: "node",
+              args: [tmpCjs, path.resolve(opts.inputPath)],
+              cwd: opts.sol.rootDir,
+              timeoutMs: opts.timeoutMs,
+            });
+          } finally {
+            await fsp.rm(tmpCjs, { force: true }).catch(() => {});
+          }
+        } else {
+          exec = await execCommand({
+            cmd: "node",
+            args: [entry, path.resolve(opts.inputPath)],
+            cwd: opts.sol.rootDir,
+            timeoutMs: opts.timeoutMs,
+          });
+        }
+      } else {
+        // .mjs/.cjs/etc: run with Node as-is
+        exec = await execCommand({
+          cmd: "node",
+          args: [entry, path.resolve(opts.inputPath)],
+          cwd: opts.sol.rootDir,
+          timeoutMs: opts.timeoutMs,
+        });
+      }
     } else {
       // rust
       const cargoToml = path.join(opts.sol.rootDir, "Cargo.toml");

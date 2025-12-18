@@ -65,3 +65,4 @@ logs/
 ehthumbs.db
 Thumbs.db
 
+site/public/data/latest.json
