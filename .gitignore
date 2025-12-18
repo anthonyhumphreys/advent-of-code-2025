@@ -66,3 +66,7 @@ ehthumbs.db
 Thumbs.db
 
 site/public/data/latest.json
+
+# Next.js site uses src/lib/* (unignore from generic lib/ rule above)
+!site/src/lib/
+!site/src/lib/**
