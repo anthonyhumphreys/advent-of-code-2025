@@ -1,0 +1,11 @@
+{
+  "name": "aoc-human-vs-ai-benchmark",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bench": "bun scripts/run-solutions.ts",
+    "bench:task": "bun scripts/run-solutions.ts --task",
+    "bench:node": "node scripts/run-solutions.ts"
+  }
+}
+

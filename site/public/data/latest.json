@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "generatedAt": "2025-12-18T01:10:44.940Z",
+    "gitSha": "4c34c2732ba9398295852b139af297d02e5a2783",
+    "runner": {
+      "name": "bun-runner",
+      "version": "0.1.0"
+    },
+    "platform": {
+      "os": "linux 6.1.147",
+      "arch": "x64",
+      "cpuCount": 4
+    }
+  },
+  "tasks": [
+    {
+      "taskId": "01",
+      "inputPath": "inputs/01.txt",
+      "inputBytes": 18415,
+      "inputSha256": "af274d68f406568386bde3522493916761c3b5e81e91325cfb3ab86d743a1a25",
+      "promptPath": "prompts/01.md",
+      "promptBytes": 5261,
+      "promptSha256": "84bcf954cd8cfa509a228f9a8ced962cf6379e15241ad43bebaed39275d01684"
+    }
+  ],
+  "solutions": [
+    {
+      "id": "3e0429414ecd8916",
+      "taskId": "01",
+      "source": "human",
+      "language": "rust",
+      "rootDir": "human-solutions/01/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 63
+      }
+    },
+    {
+      "id": "5a6fbae5cdc8d75f",
+      "taskId": "01",
+      "source": "human",
+      "language": "python",
+      "rootDir": "human-solutions/01/python",
+      "entryHint": "main.py",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 49
+      }
+    },
+    {
+      "id": "ac10a7b33580e7cf",
+      "taskId": "01",
+      "source": "human",
+      "language": "js",
+      "rootDir": "human-solutions/01/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 59
+      }
+    }
+  ],
+  "runs": [
+    {
+      "solutionId": "3e0429414ecd8916",
+      "taskId": "01",
+      "source": "human",
+      "language": "rust",
+      "rootDir": "/workspace/human-solutions/01/rust",
+      "success": false,
+      "exitCode": 1,
+      "timedOut": false,
+      "executionTimeMs": 0,
+      "stdout": "",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 63
+      },
+      "error": "Rust binary not found after cargo build"
+    },
+    {
+      "solutionId": "5a6fbae5cdc8d75f",
+      "taskId": "01",
+      "source": "human",
+      "language": "python",
+      "rootDir": "/workspace/human-solutions/01/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 15.66,
+      "stdout": "1120\n6554",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 49
+      },
+      "baselineSolutionId": "5a6fbae5cdc8d75f",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "ac10a7b33580e7cf",
+      "taskId": "01",
+      "source": "human",
+      "language": "js",
+      "rootDir": "/workspace/human-solutions/01/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 27.36,
+      "stdout": "1120\n6554",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 59
+      },
+      "baselineSolutionId": "5a6fbae5cdc8d75f",
+      "matchesBaseline": true
+    }
+  ]
+}
