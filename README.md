@@ -15,6 +15,7 @@ AI solutions are generated using Cursor Pro with the relevant model engaged and 
 - **Claude Sonnet 4.5** - Anthropic's balanced performance model
 - **Gemini 3.0** - Google's multimodal AI model
 - **Composer 1** - Cursor's AI coding assistant
+- more to follow 
 
 ## 🛠️ Languages & Technologies
 
