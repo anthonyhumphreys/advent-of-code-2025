@@ -4,5 +4,5 @@
   "installCommand": "npm install --prefix site",
   "buildCommand": "npm run build --prefix site",
   "outputDirectory": "site/.next",
-  "ignoreCommand": "! git log -1 --pretty=%B | grep -q '\\[skip ci\\]'"
+  "ignoreCommand": "! git log -1 --pretty=%B | grep -q '^chore(dataset):'"
 }
