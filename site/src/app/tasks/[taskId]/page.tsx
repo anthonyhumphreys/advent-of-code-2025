@@ -13,16 +13,44 @@ function fmtInt(n: number | undefined) {
   return new Intl.NumberFormat("en-US").format(n);
 }
 
-type SortKey = "time" | "loc" | "deps" | "source";
+type SortKey = "result" | "time" | "loc" | "deps" | "source";
+type SortDir = "asc" | "desc";
+type ResultKey = "pass" | "wrong" | "error";
+type ResultFilter = "all" | ResultKey;
+
+function runResult(r: { success: boolean; matchesBaseline?: boolean }): ResultKey {
+  if (!r.success) return "error";
+  if (r.matchesBaseline === false) return "wrong";
+  return "pass";
+}
+
+function pillToneForResult(result: ResultKey): "good" | "bad" | "neutral" {
+  if (result === "pass") return "good";
+  if (result === "wrong") return "bad";
+  return "bad";
+}
+
+function buildHref(taskId: string, next: Record<string, string | undefined>) {
+  const params = new URLSearchParams();
+  for (const [k, v] of Object.entries(next)) {
+    if (!v || v === "all") continue;
+    params.set(k, v);
+  }
+  const qs = params.toString();
+  return qs ? `/tasks/${taskId}?${qs}` : `/tasks/${taskId}`;
+}
 
 export default async function TaskPage(props: {
   params: Promise<{ taskId: string }>;
-  searchParams: Promise<{ sort?: SortKey; dir?: "asc" | "desc" }>;
+  searchParams: Promise<{ sort?: SortKey; dir?: SortDir; result?: ResultFilter; source?: string; lang?: string }>;
 }) {
   const { taskId } = await props.params;
   const search = await props.searchParams;
   const sort: SortKey = search.sort ?? "time";
-  const dir = search.dir ?? "asc";
+  const dir: SortDir = search.dir ?? "asc";
+  const resultFilter: ResultFilter = search.result ?? "all";
+  const sourceFilter = search.source ?? "all";
+  const langFilter = search.lang ?? "all";
 
   const dataset = await loadDataset();
   if (!dataset) {
@@ -41,13 +69,36 @@ export default async function TaskPage(props: {
 
   const task = dataset.tasks.find((t) => t.taskId === taskId);
   const runs = dataset.runs.filter((r) => r.taskId === taskId);
+  const solutionsById = new Map(dataset.solutions.map((s) => [s.id, s] as const));
+
   const baselineId = runs.find((r) => r.baselineSolutionId)?.baselineSolutionId;
   const baseline =
     (baselineId ? runs.find((r) => r.solutionId === baselineId) : undefined) ??
     runs.find((r) => r.source === "human" && r.success) ??
     runs.find((r) => r.success);
 
-  const sorted = [...runs].sort((a, b) => {
+  const allSources = Array.from(new Set(runs.map((r) => r.source))).sort();
+  const modelSources = allSources.filter((s) => s !== "human");
+  const allLangs = Array.from(new Set(runs.map((r) => r.language))).sort();
+
+  const filtered = runs.filter((r) => {
+    if (resultFilter !== "all" && runResult(r) !== resultFilter) return false;
+
+    if (sourceFilter !== "all") {
+      if (sourceFilter === "human") {
+        if (r.source !== "human") return false;
+      } else if (sourceFilter === "ai") {
+        if (r.source === "human") return false;
+      } else if (r.source !== sourceFilter) {
+        return false;
+      }
+    }
+
+    if (langFilter !== "all" && r.language !== langFilter) return false;
+    return true;
+  });
+
+  const sorted = [...filtered].sort((a, b) => {
     const aLoc = a.codeStats?.totalLoc ?? Number.POSITIVE_INFINITY;
     const bLoc = b.codeStats?.totalLoc ?? Number.POSITIVE_INFINITY;
     const aDeps = a.codeStats?.dependencyCount ?? Number.POSITIVE_INFINITY;
@@ -58,11 +109,20 @@ export default async function TaskPage(props: {
     if (sort === "loc") cmp = aLoc - bLoc;
     if (sort === "deps") cmp = aDeps - bDeps;
     if (sort === "source") cmp = a.source.localeCompare(b.source) || a.language.localeCompare(b.language);
+    if (sort === "result") {
+      const order = (r: typeof a) => (runResult(r) === "pass" ? 0 : runResult(r) === "wrong" ? 1 : 2);
+      cmp = order(a) - order(b);
+    }
 
     return dir === "asc" ? cmp : -cmp;
   });
 
-  const ok = runs.filter((r) => r.success).length;
+  const passCount = runs.filter((r) => runResult(r) === "pass").length;
+  const wrongCount = runs.filter((r) => runResult(r) === "wrong").length;
+  const errorCount = runs.filter((r) => runResult(r) === "error").length;
+
+  const baselineTime = baseline?.success ? baseline.executionTimeMs : null;
+  const isBaselineRow = (solutionId: string) => (baseline ? solutionId === baseline.solutionId : false);
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-14">
@@ -73,19 +133,8 @@ export default async function TaskPage(props: {
           </Link>
           <h1 className="mt-4 font-mono text-4xl font-semibold text-white">{taskId}</h1>
           <p className="mt-2 text-sm text-white/70">
-            {ok}/{runs.length} successful · sort{" "}
-            <SortLink taskId={taskId} active={sort === "time"} sort="time">
-              time
-            </SortLink>{" "}
-            <SortLink taskId={taskId} active={sort === "loc"} sort="loc">
-              loc
-            </SortLink>{" "}
-            <SortLink taskId={taskId} active={sort === "deps"} sort="deps">
-              deps
-            </SortLink>{" "}
-            <SortLink taskId={taskId} active={sort === "source"} sort="source">
-              source
-            </SortLink>
+            {passCount} pass · {wrongCount} wrong · {errorCount} error · showing{" "}
+            <span className="font-mono text-white/80">{filtered.length}</span>/<span className="font-mono text-white/80">{runs.length}</span>
           </p>
           {task ? (
             <p className="mt-2 text-xs text-white/50">
@@ -95,6 +144,7 @@ export default async function TaskPage(props: {
                 <>
                   {" "}
                   · prompt: <span className="font-mono">{task.promptPath}</span>
+                  {task.promptBytes ? <> · {fmtInt(task.promptBytes)} bytes</> : null}
                 </>
               ) : null}
             </p>
@@ -106,15 +156,123 @@ export default async function TaskPage(props: {
           <div className="mt-2 text-sm text-white/80">
             {baseline ? (
               <>
-                <span className="font-mono">{baseline.source}</span> ·{" "}
-                <span className="font-mono">{baseline.language}</span> ·{" "}
-                <span className="font-mono">{formatMs(baseline.executionTimeMs)}</span>
+                <span className="font-mono">{baseline.source}</span> · <span className="font-mono">{baseline.language}</span> ·{" "}
+                <span className="font-mono">{baseline.success ? formatMs(baseline.executionTimeMs) : "—"}</span>
               </>
             ) : (
               "—"
             )}
           </div>
-          <div className="mt-2 text-xs text-white/50">matchesBaseline is computed per task.</div>
+          <div className="mt-2 text-xs text-white/50">“pass” means stdout matches the baseline for this task.</div>
+        </div>
+      </div>
+
+      <div className="mb-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <div className="text-xs text-white/60">Sort</div>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {(["time", "loc", "deps", "source", "result"] as const).map((k) => {
+                const active = sort === k;
+                const nextDir: SortDir = active ? (dir === "asc" ? "desc" : "asc") : "asc";
+                return (
+                  <Link
+                    key={k}
+                    href={buildHref(taskId, { sort: k, dir: nextDir, result: resultFilter, source: sourceFilter, lang: langFilter })}
+                    className={
+                      active
+                        ? "rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white"
+                        : "rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-white/70 hover:bg-white/7 hover:text-white"
+                    }
+                    aria-current={active ? "page" : undefined}
+                  >
+                    {k}
+                    {active ? <span className="ml-1 text-white/70">{dir === "asc" ? "↑" : "↓"}</span> : null}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            <Link
+              href={buildHref(taskId, { sort, dir, result: undefined, source: undefined, lang: undefined })}
+              className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-white/70 hover:bg-white/7 hover:text-white"
+            >
+              reset
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-4 grid gap-3 lg:grid-cols-3">
+          <div>
+            <div className="text-xs text-white/60">Result</div>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {(["all", "pass", "wrong", "error"] as const).map((k) => {
+                const active = resultFilter === k;
+                return (
+                  <Link
+                    key={k}
+                    href={buildHref(taskId, { sort, dir, result: k === "all" ? undefined : k, source: sourceFilter, lang: langFilter })}
+                    className={
+                      active
+                        ? "rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white"
+                        : "rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-white/70 hover:bg-white/7 hover:text-white"
+                    }
+                    aria-current={active ? "page" : undefined}
+                  >
+                    {k}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          <div>
+            <div className="text-xs text-white/60">Source</div>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {(["all", "human", "ai", ...modelSources] as const).map((k) => {
+                const active = sourceFilter === k;
+                return (
+                  <Link
+                    key={k}
+                    href={buildHref(taskId, { sort, dir, result: resultFilter, source: k === "all" ? undefined : k, lang: langFilter })}
+                    className={
+                      active
+                        ? "rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white"
+                        : "rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-white/70 hover:bg-white/7 hover:text-white"
+                    }
+                    aria-current={active ? "page" : undefined}
+                  >
+                    <span className="font-mono">{k}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          <div>
+            <div className="text-xs text-white/60">Language</div>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {(["all", ...allLangs] as const).map((k) => {
+                const active = langFilter === k;
+                return (
+                  <Link
+                    key={k}
+                    href={buildHref(taskId, { sort, dir, result: resultFilter, source: sourceFilter, lang: k === "all" ? undefined : k })}
+                    className={
+                      active
+                        ? "rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-medium text-white"
+                        : "rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-white/70 hover:bg-white/7 hover:text-white"
+                    }
+                    aria-current={active ? "page" : undefined}
+                  >
+                    <span className="font-mono">{k}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -124,9 +282,9 @@ export default async function TaskPage(props: {
             <tr>
               <Th>source</Th>
               <Th>lang</Th>
+              <Th className="text-center">result</Th>
               <Th className="text-right">time</Th>
-              <Th className="text-center">ok</Th>
-              <Th className="text-center">=</Th>
+              <Th className="text-right">Δ baseline</Th>
               <Th className="text-right">loc</Th>
               <Th className="text-right">files</Th>
               <Th className="text-right">deps</Th>
@@ -139,7 +297,8 @@ export default async function TaskPage(props: {
                 <Td>
                   <div className="flex items-center gap-2">
                     <span className="font-mono text-white/90">{r.source}</span>
-                    {r.source === "human" ? <Pill tone="good">you</Pill> : <Pill tone="neutral">ai</Pill>}
+                    {r.source === "human" ? <Pill tone="good">human</Pill> : <Pill tone="neutral">ai</Pill>}
+                    {isBaselineRow(r.solutionId) ? <Pill tone="neutral">baseline</Pill> : null}
                   </div>
                 </Td>
                 <Td>
@@ -147,12 +306,21 @@ export default async function TaskPage(props: {
                     {r.language}
                   </span>
                 </Td>
-                <Td className="text-right font-mono text-white/90">
-                  {r.success ? formatMs(r.executionTimeMs) : "—"}
-                </Td>
-                <Td className="text-center">{r.success ? <Pill tone="good">ok</Pill> : <Pill tone="bad">fail</Pill>}</Td>
                 <Td className="text-center">
-                  {r.success ? (r.matchesBaseline ? <Pill tone="good">=</Pill> : <Pill tone="bad">≠</Pill>) : <span className="text-white/30">—</span>}
+                  {(() => {
+                    const res = runResult(r);
+                    return <Pill tone={pillToneForResult(res)}>{res}</Pill>;
+                  })()}
+                </Td>
+                <Td className="text-right font-mono text-white/90">{r.success ? formatMs(r.executionTimeMs) : "—"}</Td>
+                <Td className="text-right font-mono text-white/80">
+                  {baselineTime && r.success ? (
+                    <span className={r.executionTimeMs <= baselineTime ? "text-emerald-200" : "text-white/80"}>
+                      {(r.executionTimeMs / baselineTime).toFixed(2)}×
+                    </span>
+                  ) : (
+                    "—"
+                  )}
                 </Td>
                 <Td className="text-right font-mono text-white/80">{fmtInt(r.codeStats?.totalLoc)}</Td>
                 <Td className="text-right font-mono text-white/80">{fmtInt(r.codeStats?.fileCount)}</Td>
@@ -165,7 +333,7 @@ export default async function TaskPage(props: {
                     </div>
                   ) : (
                     <div className="text-xs text-white/55">
-                      <div className="font-mono text-white/60">{r.rootDir}</div>
+                      <div className="font-mono text-white/60">{solutionsById.get(r.solutionId)?.rootDir ?? r.rootDir}</div>
                     </div>
                   )}
                 </Td>
@@ -184,22 +352,6 @@ export default async function TaskPage(props: {
         </section>
       ) : null}
     </div>
-  );
-}
-
-function SortLink(props: {
-  taskId: string;
-  sort: SortKey;
-  active?: boolean;
-  children: React.ReactNode;
-}) {
-  return (
-    <Link
-      href={`/tasks/${props.taskId}?sort=${props.sort}&dir=asc`}
-      className={props.active ? "font-mono text-white" : "font-mono text-white/60 hover:text-white"}
-    >
-      {props.children}
-    </Link>
   );
 }
 

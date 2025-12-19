@@ -40,8 +40,10 @@ export default async function Home() {
   const runs = dataset.runs;
   const tasks = dataset.tasks;
   const models = uniq(runs.filter((r) => r.source !== "human").map((r) => r.source)).sort();
-  const successRuns = runs.filter((r) => r.success);
-  const successRate = runs.length ? (successRuns.length / runs.length) * 100 : 0;
+  const passRuns = runs.filter((r) => r.success && r.matchesBaseline);
+  const wrongCount = runs.filter((r) => r.success && r.matchesBaseline === false).length;
+  const errorCount = runs.filter((r) => !r.success).length;
+  const passRate = runs.length ? (passRuns.length / runs.length) * 100 : 0;
 
   return (
     <div className="min-h-screen">
@@ -66,8 +68,8 @@ export default async function Home() {
         <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <Stat label="Tasks" value={String(tasks.length)} hint="inputs/*.txt" />
           <Stat label="Solutions" value={String(dataset.solutions.length)} hint="discovered" />
-          <Stat label="Runs" value={String(runs.length)} hint="executed" />
-          <Stat label="Success rate" value={`${successRate.toFixed(1)}%`} hint={`${successRuns.length} ok`} />
+          <Stat label="Runs" value={String(runs.length)} hint={`${passRuns.length} pass · ${wrongCount} wrong · ${errorCount} error`} />
+          <Stat label="Pass rate" value={`${passRate.toFixed(1)}%`} hint={`${passRuns.length} passed`} />
         </section>
 
         <section className="mt-10">
@@ -84,8 +86,13 @@ export default async function Home() {
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {tasks.map((t) => {
               const taskRuns = runs.filter((r) => r.taskId === t.taskId);
-              const ok = taskRuns.filter((r) => r.success);
-              const best = ok.reduce<number | null>((min, r) => (min === null ? r.executionTimeMs : Math.min(min, r.executionTimeMs)), null);
+              const pass = taskRuns.filter((r) => r.success && r.matchesBaseline);
+              const wrong = taskRuns.filter((r) => r.success && r.matchesBaseline === false);
+              const error = taskRuns.filter((r) => !r.success);
+              const best = pass.reduce<number | null>(
+                (min, r) => (min === null ? r.executionTimeMs : Math.min(min, r.executionTimeMs)),
+                null,
+              );
               const bestLabel = best === null ? "—" : formatMs(best);
               return (
                 <Link
@@ -104,17 +111,20 @@ export default async function Home() {
                   </div>
                   <div className="mt-4 grid grid-cols-3 gap-2 text-xs text-white/60">
                     <div className="rounded-lg bg-black/20 px-2 py-2">
-                      <div className="text-white/50">runs</div>
-                      <div className="mt-1 font-mono text-white/80">{taskRuns.length}</div>
+                      <div className="text-white/50">pass</div>
+                      <div className="mt-1 font-mono text-white/80">{pass.length}</div>
                     </div>
                     <div className="rounded-lg bg-black/20 px-2 py-2">
-                      <div className="text-white/50">ok</div>
-                      <div className="mt-1 font-mono text-white/80">{ok.length}</div>
+                      <div className="text-white/50">wrong</div>
+                      <div className="mt-1 font-mono text-white/80">{wrong.length}</div>
                     </div>
                     <div className="rounded-lg bg-black/20 px-2 py-2">
-                      <div className="text-white/50">fail</div>
-                      <div className="mt-1 font-mono text-white/80">{taskRuns.length - ok.length}</div>
+                      <div className="text-white/50">error</div>
+                      <div className="mt-1 font-mono text-white/80">{error.length}</div>
                     </div>
+                  </div>
+                  <div className="mt-4 text-xs text-white/50">
+                    runs <span className="font-mono text-white/70">{taskRuns.length}</span>
                   </div>
                   <div className="mt-4 text-sm text-white/70">
                     <span className="underline decoration-white/20 underline-offset-4 group-hover:decoration-white/40">
