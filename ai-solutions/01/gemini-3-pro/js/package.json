@@ -1,7 +1,6 @@
 {
   "name": "gemini-3-0-day01",
   "version": "1.0.0",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
