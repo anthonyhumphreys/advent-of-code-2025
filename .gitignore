@@ -29,6 +29,10 @@ env/
 ENV/
 .venv
 
+# Allow the Next.js site's source `lib/` directory (this repo also has Python ignores above).
+!site/src/lib/
+!site/src/lib/**
+
 # Node/TypeScript
 node_modules/
 npm-debug.log*
@@ -64,9 +68,3 @@ logs/
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-site/public/data/latest.json
-
-# Next.js site uses src/lib/* (unignore from generic lib/ rule above)
-!site/src/lib/
-!site/src/lib/**

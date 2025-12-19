@@ -1,17 +1,15 @@
-import "server-only";
-
-import { readFile } from "node:fs/promises";
+import { promises as fs } from "node:fs";
 import path from "node:path";
-import { cache } from "react";
 
-type DatasetMeta = {
-  generatedAt: string;
-  gitSha?: string;
-  runner?: { name: string; version: string };
-  platform?: { os: string; arch: string; cpuCount?: number };
+export type Language = "python" | "js" | "rust";
+
+export type CodeStats = {
+  fileCount: number;
+  totalLoc: number;
+  dependencyCount?: number;
 };
 
-export type DatasetTask = {
+export type TaskMeta = {
   taskId: string;
   inputPath: string;
   inputBytes: number;
@@ -21,57 +19,57 @@ export type DatasetTask = {
   promptSha256?: string;
 };
 
-export type DatasetCodeStats = {
-  fileCount?: number;
-  totalLoc?: number;
-  dependencyCount?: number;
-};
-
-export type DatasetSolution = {
+export type SolutionRecord = {
   id: string;
   taskId: string;
-  source: string;
-  language: string;
+  source: string; // "human" or model name
+  language: Language;
   rootDir: string;
   entryHint?: string;
-  codeStats?: DatasetCodeStats;
+  codeStats?: CodeStats;
 };
 
-export type DatasetRun = {
+export type RunResult = {
   solutionId: string;
   taskId: string;
-  source: string;
-  language: string;
+  source: string; // "human" or model name
+  language: Language;
   rootDir: string;
   success: boolean;
   exitCode: number;
   timedOut: boolean;
   executionTimeMs: number;
-  stdout?: string;
-  stderr?: string;
+  stdout: string;
+  stderr: string;
   error?: string;
-  codeStats?: DatasetCodeStats;
-  baselineSolutionId?: string;
   matchesBaseline?: boolean;
+  baselineSolutionId?: string;
+  codeStats?: CodeStats;
 };
 
 export type Dataset = {
-  meta: DatasetMeta;
-  tasks: DatasetTask[];
-  solutions: DatasetSolution[];
-  runs: DatasetRun[];
+  meta: {
+    generatedAt: string;
+    gitSha?: string;
+    runner: { name: string; version: string };
+    platform: { os: string; arch: string; cpuCount: number };
+  };
+  tasks: TaskMeta[];
+  solutions: SolutionRecord[];
+  runs: RunResult[];
 };
 
-async function readLatestJson(): Promise<string> {
-  const filePath = path.join(process.cwd(), "public", "data", "latest.json");
-  return await readFile(filePath, "utf8");
-}
+/**
+ * Loads the benchmark dataset from `public/data/latest.json`.
+ * Returns `null` if the dataset doesn't exist yet.
+ */
+export async function loadDataset(): Promise<Dataset | null> {
+  const datasetPath = path.join(process.cwd(), "public", "data", "latest.json");
 
-export const loadDataset = cache(async (): Promise<Dataset | null> => {
   try {
-    const raw = await readLatestJson();
+    const raw = await fs.readFile(datasetPath, "utf8");
     return JSON.parse(raw) as Dataset;
   } catch {
     return null;
   }
-});
+}
