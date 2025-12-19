@@ -227,6 +227,22 @@ def run_rust_solution(path: Path, input_file: Path) -> Tuple[int, str, str, floa
             return 1, "", str(e), elapsed
 
 
+import re
+
+
+def looks_like_commonjs(source: str) -> bool:
+    """
+    Heuristic to detect if JS source uses CommonJS syntax.
+    Many AI solutions use `require(...)` but live under a repo-level `"type": "module"`,
+    so Node treats `.js` as ESM and crashes with "require is not defined".
+    """
+    return bool(
+        re.search(r'\brequire\s*\(', source) or
+        re.search(r'\bmodule\.exports\b', source) or
+        re.search(r'\bexports\.[A-Za-z_$][\w$]*\b', source)
+    )
+
+
 def run_js_solution(path: Path, input_file: Path) -> Tuple[int, str, str, float]:
     """Run a JavaScript/TypeScript solution."""
     package_json = path / "package.json"
@@ -279,15 +295,42 @@ def run_js_solution(path: Path, input_file: Path) -> Tuple[int, str, str, float]
                     continue
             return 1, "", "TypeScript runner (tsx/ts-node) not found", 0.0
         else:
-            result = subprocess.run(
-                ["node", str(main_file), str(input_file)],
-                capture_output=True,
-                text=True,
-                timeout=60,
-                cwd=str(path)
-            )
-            elapsed = (time.perf_counter() - start) * 1000
-            return result.returncode, result.stdout, result.stderr, elapsed
+            # Check if the source looks like CommonJS
+            # If so, run it as .cjs to avoid ESM issues from root package.json "type": "module"
+            try:
+                source_content = main_file.read_text(encoding='utf-8')
+            except Exception:
+                source_content = ""
+            
+            if source_content and looks_like_commonjs(source_content):
+                # Create a temporary .cjs file to run as CommonJS
+                tmp_cjs = path / f".tmp-bench-{main_file.stem}.cjs"
+                try:
+                    tmp_cjs.write_text(source_content, encoding='utf-8')
+                    result = subprocess.run(
+                        ["node", str(tmp_cjs), str(input_file)],
+                        capture_output=True,
+                        text=True,
+                        timeout=60,
+                        cwd=str(path)
+                    )
+                    elapsed = (time.perf_counter() - start) * 1000
+                    return result.returncode, result.stdout, result.stderr, elapsed
+                finally:
+                    try:
+                        tmp_cjs.unlink(missing_ok=True)
+                    except Exception:
+                        pass
+            else:
+                result = subprocess.run(
+                    ["node", str(main_file), str(input_file)],
+                    capture_output=True,
+                    text=True,
+                    timeout=60,
+                    cwd=str(path)
+                )
+                elapsed = (time.perf_counter() - start) * 1000
+                return result.returncode, result.stdout, result.stderr, elapsed
     except subprocess.TimeoutExpired:
         elapsed = (time.perf_counter() - start) * 1000
         return 124, "", f"Solution timed out after 60 seconds", elapsed
