@@ -1,7 +1,7 @@
 use std::fs;
 
 fn main() {
-    let input = fs::read_to_string("../../../../inputs/04.txt").unwrap();
+    let input = fs::read_to_string("../../../inputs/04.txt").unwrap();
     let grid: Vec<Vec<char>> = input
         .trim()
         .lines()
