@@ -1,0 +1,7 @@
+[package]
+name = "day04_opus_4_5"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
