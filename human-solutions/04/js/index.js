@@ -48,3 +48,53 @@ function findAccessibleRolls(grid) {
 const accessibleCount = findAccessibleRolls(grid);
 
 console.log(accessibleCount);
+
+function countTotalRemovable(grid) {
+  const rows = grid.length;
+  const cols = grid[0].length;
+  
+  let warehouse = grid.map(row => row.split(''));
+  
+  const neighbourOffsets = [
+    [-1, -1], [-1, 0], [-1, 1],
+    [ 0, -1],          [ 0, 1],
+    [ 1, -1], [ 1, 0], [ 1, 1],
+  ];
+  
+  let totalRemoved = 0;
+  
+  while (true) {
+    const toRemove = [];
+    
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        if (warehouse[r][c] !== '@') continue;
+        
+        let neighbourRolls = 0;
+        for (const [dr, dc] of neighbourOffsets) {
+          const nr = r + dr;
+          const nc = c + dc;
+          if (nr < 0 || nr >= rows || nc < 0 || nc >= cols) continue;
+          if (warehouse[nr][nc] === '@') neighbourRolls++;
+        }
+        
+        if (neighbourRolls < 4) {
+          toRemove.push([r, c]);
+        }
+      }
+    }
+    
+    if (toRemove.length === 0) break;
+    
+    for (const [r, c] of toRemove) {
+      warehouse[r][c] = 'x';
+    }
+    
+    totalRemoved += toRemove.length;
+  }
+  
+  return totalRemoved;
+}
+
+const totalRemovable = countTotalRemovable(grid);
+console.log(totalRemovable);
