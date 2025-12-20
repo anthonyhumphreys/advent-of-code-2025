@@ -1,15 +1,15 @@
 {
   "meta": {
-    "generatedAt": "2025-12-20T23:28:00.981Z",
-    "gitSha": "8038cc0f0fa0dacf3a4c61dbbcea1fbdf20c4b98",
+    "generatedAt": "2025-12-20T23:39:16.644Z",
+    "gitSha": "ab109e9d981a2c20d718f06923f54e3fe62df2d1",
     "runner": {
       "name": "bun-runner",
       "version": "0.1.0"
     },
     "platform": {
-      "os": "darwin 25.1.0",
-      "arch": "arm64",
-      "cpuCount": 8
+      "os": "linux 6.11.0-1018-azure",
+      "arch": "x64",
+      "cpuCount": 4
     }
   },
   "tasks": [
@@ -52,7 +52,7 @@
   ],
   "solutions": [
     {
-      "id": "5f4f4a88dba0bd43",
+      "id": "94f446b7958b2eac",
       "taskId": "01",
       "source": "human",
       "language": "python",
@@ -64,19 +64,7 @@
       }
     },
     {
-      "id": "c681b37e43615b14",
-      "taskId": "01",
-      "source": "human",
-      "language": "js",
-      "rootDir": "human-solutions/01/js",
-      "entryHint": "index.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 59
-      }
-    },
-    {
-      "id": "fe6882b56bf4427b",
+      "id": "17474fae15ab0fdd",
       "taskId": "01",
       "source": "human",
       "language": "rust",
@@ -88,7 +76,19 @@
       }
     },
     {
-      "id": "da643517ec55caef",
+      "id": "1c39001ca402e525",
+      "taskId": "01",
+      "source": "human",
+      "language": "js",
+      "rootDir": "human-solutions/01/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 59
+      }
+    },
+    {
+      "id": "f192e5d38c0982c6",
       "taskId": "01",
       "source": "opus-4.5",
       "language": "python",
@@ -100,19 +100,7 @@
       }
     },
     {
-      "id": "0be3da14ec6b8cc9",
-      "taskId": "01",
-      "source": "opus-4.5",
-      "language": "js",
-      "rootDir": "ai-solutions/01/opus-4.5/js",
-      "entryHint": "solution.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 101
-      }
-    },
-    {
-      "id": "24858dbac254f60b",
+      "id": "db94752e801ea736",
       "taskId": "01",
       "source": "opus-4.5",
       "language": "rust",
@@ -124,79 +112,19 @@
       }
     },
     {
-      "id": "55395b99a235279c",
+      "id": "b066bcc005b42eee",
       "taskId": "01",
-      "source": "gpt-5.1-codex",
-      "language": "python",
-      "rootDir": "ai-solutions/01/gpt-5.1-codex/python",
-      "entryHint": "main.py",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 93
-      }
-    },
-    {
-      "id": "095a0f7409efa2bf",
-      "taskId": "01",
-      "source": "gpt-5.1-codex",
+      "source": "opus-4.5",
       "language": "js",
-      "rootDir": "ai-solutions/01/gpt-5.1-codex/js",
-      "entryHint": "index.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 93
-      }
-    },
-    {
-      "id": "158bf39eab4af9db",
-      "taskId": "01",
-      "source": "gpt-5.1-codex",
-      "language": "rust",
-      "rootDir": "ai-solutions/01/gpt-5.1-codex/rust",
-      "entryHint": "Cargo.toml",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 100
-      }
-    },
-    {
-      "id": "c616110feabe0d97",
-      "taskId": "01",
-      "source": "sonnet-4.5",
-      "language": "python",
-      "rootDir": "ai-solutions/01/sonnet-4.5/python",
-      "entryHint": "solution.py",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 55
-      }
-    },
-    {
-      "id": "9574e15723811fd3",
-      "taskId": "01",
-      "source": "sonnet-4.5",
-      "language": "js",
-      "rootDir": "ai-solutions/01/sonnet-4.5/js",
+      "rootDir": "ai-solutions/01/opus-4.5/js",
       "entryHint": "solution.js",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 63
+        "totalLoc": 101
       }
     },
     {
-      "id": "7d864f61e8c1568a",
-      "taskId": "01",
-      "source": "sonnet-4.5",
-      "language": "rust",
-      "rootDir": "ai-solutions/01/sonnet-4.5/rust",
-      "entryHint": "Cargo.toml",
-      "codeStats": {
-        "fileCount": 2,
-        "totalLoc": 122
-      }
-    },
-    {
-      "id": "0400a81abe9f91f6",
+      "id": "f6cccb63452a128b",
       "taskId": "01",
       "source": "composer-1",
       "language": "python",
@@ -208,7 +136,19 @@
       }
     },
     {
-      "id": "60d237259d397466",
+      "id": "637248e61946d923",
+      "taskId": "01",
+      "source": "composer-1",
+      "language": "rust",
+      "rootDir": "ai-solutions/01/composer-1/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 63
+      }
+    },
+    {
+      "id": "d710b63197d6db39",
       "taskId": "01",
       "source": "composer-1",
       "language": "js",
@@ -221,19 +161,43 @@
       }
     },
     {
-      "id": "b4dd309cb5260fc9",
+      "id": "7bd3f5f7f581536b",
       "taskId": "01",
-      "source": "composer-1",
+      "source": "sonnet-4.5",
+      "language": "python",
+      "rootDir": "ai-solutions/01/sonnet-4.5/python",
+      "entryHint": "solution.py",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 55
+      }
+    },
+    {
+      "id": "7a0aafa30c44ada4",
+      "taskId": "01",
+      "source": "sonnet-4.5",
       "language": "rust",
-      "rootDir": "ai-solutions/01/composer-1/rust",
+      "rootDir": "ai-solutions/01/sonnet-4.5/rust",
       "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 2,
+        "totalLoc": 122
+      }
+    },
+    {
+      "id": "caddf217db944e04",
+      "taskId": "01",
+      "source": "sonnet-4.5",
+      "language": "js",
+      "rootDir": "ai-solutions/01/sonnet-4.5/js",
+      "entryHint": "solution.js",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 63
       }
     },
     {
-      "id": "9453f99abb38a417",
+      "id": "4c251f6d5d25783f",
       "taskId": "01",
       "source": "gemini-3-pro",
       "language": "python",
@@ -245,7 +209,19 @@
       }
     },
     {
-      "id": "a26c5b850adb091e",
+      "id": "fb02376b3e45c920",
+      "taskId": "01",
+      "source": "gemini-3-pro",
+      "language": "rust",
+      "rootDir": "ai-solutions/01/gemini-3-pro/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 54
+      }
+    },
+    {
+      "id": "ef2fc4e69c2bee0e",
       "taskId": "01",
       "source": "gemini-3-pro",
       "language": "js",
@@ -258,19 +234,43 @@
       }
     },
     {
-      "id": "bdb0ba054400827c",
+      "id": "09e004ec37e19423",
       "taskId": "01",
-      "source": "gemini-3-pro",
-      "language": "rust",
-      "rootDir": "ai-solutions/01/gemini-3-pro/rust",
-      "entryHint": "Cargo.toml",
+      "source": "gpt-5.1-codex",
+      "language": "python",
+      "rootDir": "ai-solutions/01/gpt-5.1-codex/python",
+      "entryHint": "main.py",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 54
+        "totalLoc": 93
       }
     },
     {
-      "id": "672c59fcb1c88c35",
+      "id": "c0f1c0cfe243fbd6",
+      "taskId": "01",
+      "source": "gpt-5.1-codex",
+      "language": "rust",
+      "rootDir": "ai-solutions/01/gpt-5.1-codex/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 100
+      }
+    },
+    {
+      "id": "b34e529d5a765fb7",
+      "taskId": "01",
+      "source": "gpt-5.1-codex",
+      "language": "js",
+      "rootDir": "ai-solutions/01/gpt-5.1-codex/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 93
+      }
+    },
+    {
+      "id": "b3d8b8e35fdd1bab",
       "taskId": "02",
       "source": "human",
       "language": "python",
@@ -282,19 +282,7 @@
       }
     },
     {
-      "id": "c3a8c0ab08c5da86",
-      "taskId": "02",
-      "source": "human",
-      "language": "js",
-      "rootDir": "human-solutions/02/js",
-      "entryHint": "index.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 29
-      }
-    },
-    {
-      "id": "0af169335795f421",
+      "id": "c5fbcd9871a0be1a",
       "taskId": "02",
       "source": "human",
       "language": "rust",
@@ -306,7 +294,19 @@
       }
     },
     {
-      "id": "4faa061209a6ede7",
+      "id": "bc5aa4d18ac46aed",
+      "taskId": "02",
+      "source": "human",
+      "language": "js",
+      "rootDir": "human-solutions/02/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 29
+      }
+    },
+    {
+      "id": "05ce05dc7a6caff7",
       "taskId": "02",
       "source": "opus-4.5",
       "language": "python",
@@ -318,7 +318,19 @@
       }
     },
     {
-      "id": "1e0aaef51cd94231",
+      "id": "9b015379fa9818eb",
+      "taskId": "02",
+      "source": "opus-4.5",
+      "language": "rust",
+      "rootDir": "ai-solutions/02/opus-4.5/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 83
+      }
+    },
+    {
+      "id": "895d19a6f527b75c",
       "taskId": "02",
       "source": "opus-4.5",
       "language": "js",
@@ -331,92 +343,7 @@
       }
     },
     {
-      "id": "2dc9f39e1c9fdb64",
-      "taskId": "02",
-      "source": "opus-4.5",
-      "language": "rust",
-      "rootDir": "ai-solutions/02/opus-4.5/rust",
-      "entryHint": "Cargo.toml",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 83
-      }
-    },
-    {
-      "id": "d39a86bba12e5337",
-      "taskId": "02",
-      "source": "gpt-5.1-codex",
-      "language": "python",
-      "rootDir": "ai-solutions/02/gpt-5.1-codex/python",
-      "entryHint": "main.py",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 64
-      }
-    },
-    {
-      "id": "53b83c3bc9f5372e",
-      "taskId": "02",
-      "source": "gpt-5.1-codex",
-      "language": "js",
-      "rootDir": "ai-solutions/02/gpt-5.1-codex/js",
-      "entryHint": "index.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 63,
-        "dependencyCount": 0
-      }
-    },
-    {
-      "id": "1c2550e3db1d1947",
-      "taskId": "02",
-      "source": "gpt-5.1-codex",
-      "language": "rust",
-      "rootDir": "ai-solutions/02/gpt-5.1-codex/rust",
-      "entryHint": "Cargo.toml",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 80
-      }
-    },
-    {
-      "id": "2fc5cef65b51b4a1",
-      "taskId": "02",
-      "source": "sonnet-4.5",
-      "language": "python",
-      "rootDir": "ai-solutions/02/sonnet-4.5/python",
-      "entryHint": "main.py",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 58
-      }
-    },
-    {
-      "id": "05b50267e96f1d8c",
-      "taskId": "02",
-      "source": "sonnet-4.5",
-      "language": "js",
-      "rootDir": "ai-solutions/02/sonnet-4.5/js",
-      "entryHint": "index.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 63
-      }
-    },
-    {
-      "id": "b9555b44f0a91d67",
-      "taskId": "02",
-      "source": "sonnet-4.5",
-      "language": "rust",
-      "rootDir": "ai-solutions/02/sonnet-4.5/rust",
-      "entryHint": "Cargo.toml",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 80
-      }
-    },
-    {
-      "id": "d6c618f118a9476d",
+      "id": "ece747412e86913e",
       "taskId": "02",
       "source": "composer-1",
       "language": "python",
@@ -428,7 +355,19 @@
       }
     },
     {
-      "id": "b281f8a6ec659997",
+      "id": "a07b34fdba820d8a",
+      "taskId": "02",
+      "source": "composer-1",
+      "language": "rust",
+      "rootDir": "ai-solutions/02/composer-1/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 106
+      }
+    },
+    {
+      "id": "839af44b75d73767",
       "taskId": "02",
       "source": "composer-1",
       "language": "js",
@@ -441,19 +380,43 @@
       }
     },
     {
-      "id": "44c9588c9037e41a",
+      "id": "c56a56a5c97c0b84",
       "taskId": "02",
-      "source": "composer-1",
-      "language": "rust",
-      "rootDir": "ai-solutions/02/composer-1/rust",
-      "entryHint": "Cargo.toml",
+      "source": "sonnet-4.5",
+      "language": "python",
+      "rootDir": "ai-solutions/02/sonnet-4.5/python",
+      "entryHint": "main.py",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 106
+        "totalLoc": 58
       }
     },
     {
-      "id": "3923766340bd3009",
+      "id": "67e5cbaf3ebde151",
+      "taskId": "02",
+      "source": "sonnet-4.5",
+      "language": "rust",
+      "rootDir": "ai-solutions/02/sonnet-4.5/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 80
+      }
+    },
+    {
+      "id": "3ad5ab7eb406449f",
+      "taskId": "02",
+      "source": "sonnet-4.5",
+      "language": "js",
+      "rootDir": "ai-solutions/02/sonnet-4.5/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 63
+      }
+    },
+    {
+      "id": "5755ada54603245a",
       "taskId": "02",
       "source": "gemini-3-pro",
       "language": "python",
@@ -465,7 +428,19 @@
       }
     },
     {
-      "id": "abaf0e329c068dd3",
+      "id": "4ec17a3076f31a4e",
+      "taskId": "02",
+      "source": "gemini-3-pro",
+      "language": "rust",
+      "rootDir": "ai-solutions/02/gemini-3-pro/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 55
+      }
+    },
+    {
+      "id": "bea2810f67f56763",
       "taskId": "02",
       "source": "gemini-3-pro",
       "language": "js",
@@ -478,19 +453,44 @@
       }
     },
     {
-      "id": "98a9f65e22382a24",
+      "id": "f18be2d3b9ffda23",
       "taskId": "02",
-      "source": "gemini-3-pro",
-      "language": "rust",
-      "rootDir": "ai-solutions/02/gemini-3-pro/rust",
-      "entryHint": "Cargo.toml",
+      "source": "gpt-5.1-codex",
+      "language": "python",
+      "rootDir": "ai-solutions/02/gpt-5.1-codex/python",
+      "entryHint": "main.py",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 55
+        "totalLoc": 64
       }
     },
     {
-      "id": "635d49510faba369",
+      "id": "f6f068ad4cba6381",
+      "taskId": "02",
+      "source": "gpt-5.1-codex",
+      "language": "rust",
+      "rootDir": "ai-solutions/02/gpt-5.1-codex/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 80
+      }
+    },
+    {
+      "id": "5e1fffe3ff3f78d7",
+      "taskId": "02",
+      "source": "gpt-5.1-codex",
+      "language": "js",
+      "rootDir": "ai-solutions/02/gpt-5.1-codex/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 63,
+        "dependencyCount": 0
+      }
+    },
+    {
+      "id": "927c70361921b71a",
       "taskId": "03",
       "source": "human",
       "language": "python",
@@ -502,19 +502,7 @@
       }
     },
     {
-      "id": "6e6f11a7c14612ae",
-      "taskId": "03",
-      "source": "human",
-      "language": "js",
-      "rootDir": "human-solutions/03/js",
-      "entryHint": "index.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 52
-      }
-    },
-    {
-      "id": "38da928bbbda6061",
+      "id": "4ba9f6e5758c7876",
       "taskId": "03",
       "source": "human",
       "language": "rust",
@@ -526,7 +514,19 @@
       }
     },
     {
-      "id": "f4b5c86c5bda9073",
+      "id": "2bb80b50c6a6746e",
+      "taskId": "03",
+      "source": "human",
+      "language": "js",
+      "rootDir": "human-solutions/03/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 52
+      }
+    },
+    {
+      "id": "fef11302eeeb4f18",
       "taskId": "03",
       "source": "opus-4.5",
       "language": "python",
@@ -538,19 +538,7 @@
       }
     },
     {
-      "id": "334f0f08a8695ba7",
-      "taskId": "03",
-      "source": "opus-4.5",
-      "language": "js",
-      "rootDir": "ai-solutions/03/opus-4.5/js",
-      "entryHint": "solution.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 47
-      }
-    },
-    {
-      "id": "9ee9e374f977555b",
+      "id": "edb27b11041dcaba",
       "taskId": "03",
       "source": "opus-4.5",
       "language": "rust",
@@ -562,79 +550,19 @@
       }
     },
     {
-      "id": "4a622347e2b9e1bc",
+      "id": "9d5ffacc6df7a169",
       "taskId": "03",
-      "source": "gpt-5.1-codex",
-      "language": "python",
-      "rootDir": "ai-solutions/03/gpt-5.1-codex/python",
-      "entryHint": "solution.py",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 57
-      }
-    },
-    {
-      "id": "49c0d705e03ed860",
-      "taskId": "03",
-      "source": "gpt-5.1-codex",
+      "source": "opus-4.5",
       "language": "js",
-      "rootDir": "ai-solutions/03/gpt-5.1-codex/js",
+      "rootDir": "ai-solutions/03/opus-4.5/js",
       "entryHint": "solution.js",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 45
+        "totalLoc": 47
       }
     },
     {
-      "id": "93c2056b8280db51",
-      "taskId": "03",
-      "source": "gpt-5.1-codex",
-      "language": "rust",
-      "rootDir": "ai-solutions/03/gpt-5.1-codex/rust",
-      "entryHint": "solution.rs",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 51
-      }
-    },
-    {
-      "id": "1898ade67305ca3a",
-      "taskId": "03",
-      "source": "sonnet-4.5",
-      "language": "python",
-      "rootDir": "ai-solutions/03/sonnet-4.5/python",
-      "entryHint": "solution.py",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 46
-      }
-    },
-    {
-      "id": "84913f440ab40493",
-      "taskId": "03",
-      "source": "sonnet-4.5",
-      "language": "js",
-      "rootDir": "ai-solutions/03/sonnet-4.5/js",
-      "entryHint": "solution.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 52
-      }
-    },
-    {
-      "id": "0409c6edf33feadd",
-      "taskId": "03",
-      "source": "sonnet-4.5",
-      "language": "rust",
-      "rootDir": "ai-solutions/03/sonnet-4.5/rust",
-      "entryHint": "Cargo.toml",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 59
-      }
-    },
-    {
-      "id": "ff56f2a8aae52203",
+      "id": "1f4116af6f0e6aaf",
       "taskId": "03",
       "source": "composer-1",
       "language": "python",
@@ -646,19 +574,7 @@
       }
     },
     {
-      "id": "1cb23d8e1598a1bd",
-      "taskId": "03",
-      "source": "composer-1",
-      "language": "js",
-      "rootDir": "ai-solutions/03/composer-1/js",
-      "entryHint": "solution.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 54
-      }
-    },
-    {
-      "id": "6218fb032be5b11e",
+      "id": "53b341ea03d8735d",
       "taskId": "03",
       "source": "composer-1",
       "language": "rust",
@@ -670,7 +586,55 @@
       }
     },
     {
-      "id": "b1fe255bcbbf7155",
+      "id": "0c520c0cead39cbb",
+      "taskId": "03",
+      "source": "composer-1",
+      "language": "js",
+      "rootDir": "ai-solutions/03/composer-1/js",
+      "entryHint": "solution.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 54
+      }
+    },
+    {
+      "id": "1261631621fbc82d",
+      "taskId": "03",
+      "source": "sonnet-4.5",
+      "language": "python",
+      "rootDir": "ai-solutions/03/sonnet-4.5/python",
+      "entryHint": "solution.py",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 46
+      }
+    },
+    {
+      "id": "8206c24cc947502b",
+      "taskId": "03",
+      "source": "sonnet-4.5",
+      "language": "rust",
+      "rootDir": "ai-solutions/03/sonnet-4.5/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 59
+      }
+    },
+    {
+      "id": "cf29abad99e206b1",
+      "taskId": "03",
+      "source": "sonnet-4.5",
+      "language": "js",
+      "rootDir": "ai-solutions/03/sonnet-4.5/js",
+      "entryHint": "solution.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 52
+      }
+    },
+    {
+      "id": "ceef1f36856b76d9",
       "taskId": "03",
       "source": "gemini-3-pro",
       "language": "python",
@@ -682,19 +646,7 @@
       }
     },
     {
-      "id": "8c7e98567f68ad26",
-      "taskId": "03",
-      "source": "gemini-3-pro",
-      "language": "js",
-      "rootDir": "ai-solutions/03/gemini-3-pro/js",
-      "entryHint": "solution.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 62
-      }
-    },
-    {
-      "id": "49efe921ed9bb921",
+      "id": "473c4c4afe840422",
       "taskId": "03",
       "source": "gemini-3-pro",
       "language": "rust",
@@ -706,7 +658,55 @@
       }
     },
     {
-      "id": "81ad21428cb64a3d",
+      "id": "0f9525e25750824f",
+      "taskId": "03",
+      "source": "gemini-3-pro",
+      "language": "js",
+      "rootDir": "ai-solutions/03/gemini-3-pro/js",
+      "entryHint": "solution.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 62
+      }
+    },
+    {
+      "id": "01f3c059efecaaee",
+      "taskId": "03",
+      "source": "gpt-5.1-codex",
+      "language": "python",
+      "rootDir": "ai-solutions/03/gpt-5.1-codex/python",
+      "entryHint": "solution.py",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 57
+      }
+    },
+    {
+      "id": "2ded43d0c0306e4c",
+      "taskId": "03",
+      "source": "gpt-5.1-codex",
+      "language": "rust",
+      "rootDir": "ai-solutions/03/gpt-5.1-codex/rust",
+      "entryHint": "solution.rs",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 51
+      }
+    },
+    {
+      "id": "a571f0aaea4bd6de",
+      "taskId": "03",
+      "source": "gpt-5.1-codex",
+      "language": "js",
+      "rootDir": "ai-solutions/03/gpt-5.1-codex/js",
+      "entryHint": "solution.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 45
+      }
+    },
+    {
+      "id": "382facefa81f8522",
       "taskId": "04",
       "source": "human",
       "language": "python",
@@ -718,19 +718,7 @@
       }
     },
     {
-      "id": "a29cef224f09337b",
-      "taskId": "04",
-      "source": "human",
-      "language": "js",
-      "rootDir": "human-solutions/04/js",
-      "entryHint": "index.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 101
-      }
-    },
-    {
-      "id": "23f7a6d6ac28d5eb",
+      "id": "6479bf6d08a2133f",
       "taskId": "04",
       "source": "human",
       "language": "rust",
@@ -742,7 +730,19 @@
       }
     },
     {
-      "id": "b8f3a0ff41def20f",
+      "id": "8df45d7ae6824162",
+      "taskId": "04",
+      "source": "human",
+      "language": "js",
+      "rootDir": "human-solutions/04/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 101
+      }
+    },
+    {
+      "id": "832c8224ab25bb6d",
       "taskId": "04",
       "source": "opus-4.5",
       "language": "python",
@@ -754,19 +754,7 @@
       }
     },
     {
-      "id": "865ccbdf1d0e550c",
-      "taskId": "04",
-      "source": "opus-4.5",
-      "language": "js",
-      "rootDir": "ai-solutions/04/opus-4.5/js",
-      "entryHint": "index.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 69
-      }
-    },
-    {
-      "id": "9ac6878b6bc96ddb",
+      "id": "e7e67755a182f97f",
       "taskId": "04",
       "source": "opus-4.5",
       "language": "rust",
@@ -778,79 +766,19 @@
       }
     },
     {
-      "id": "3404cb3ddf4a564b",
+      "id": "2d25c52eb9032521",
       "taskId": "04",
-      "source": "gpt-5.1-codex",
-      "language": "python",
-      "rootDir": "ai-solutions/04/gpt-5.1-codex/python",
-      "entryHint": "main.py",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 93
-      }
-    },
-    {
-      "id": "90b037e7718b1969",
-      "taskId": "04",
-      "source": "gpt-5.1-codex",
+      "source": "opus-4.5",
       "language": "js",
-      "rootDir": "ai-solutions/04/gpt-5.1-codex/js",
+      "rootDir": "ai-solutions/04/opus-4.5/js",
       "entryHint": "index.js",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 105
+        "totalLoc": 69
       }
     },
     {
-      "id": "e7aeb05f2df57111",
-      "taskId": "04",
-      "source": "gpt-5.1-codex",
-      "language": "rust",
-      "rootDir": "ai-solutions/04/gpt-5.1-codex/rust",
-      "entryHint": "Cargo.toml",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 111
-      }
-    },
-    {
-      "id": "db3e5e8f9de6cb27",
-      "taskId": "04",
-      "source": "sonnet-4.5",
-      "language": "python",
-      "rootDir": "ai-solutions/04/sonnet-4.5/python",
-      "entryHint": "main.py",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 78
-      }
-    },
-    {
-      "id": "7b49e34648dac463",
-      "taskId": "04",
-      "source": "sonnet-4.5",
-      "language": "js",
-      "rootDir": "ai-solutions/04/sonnet-4.5/js",
-      "entryHint": "index.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 99
-      }
-    },
-    {
-      "id": "9ca3b68804f38efb",
-      "taskId": "04",
-      "source": "sonnet-4.5",
-      "language": "rust",
-      "rootDir": "ai-solutions/04/sonnet-4.5/rust",
-      "entryHint": "Cargo.toml",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 111
-      }
-    },
-    {
-      "id": "34ab5ff8cb96a5de",
+      "id": "1253da2a3e3b67ef",
       "taskId": "04",
       "source": "composer-1",
       "language": "python",
@@ -862,19 +790,7 @@
       }
     },
     {
-      "id": "53804dcafdfa761f",
-      "taskId": "04",
-      "source": "composer-1",
-      "language": "js",
-      "rootDir": "ai-solutions/04/composer-1/js",
-      "entryHint": "index.js",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 73
-      }
-    },
-    {
-      "id": "96f2467633707cdb",
+      "id": "97a2ba1300306670",
       "taskId": "04",
       "source": "composer-1",
       "language": "rust",
@@ -886,7 +802,55 @@
       }
     },
     {
-      "id": "b1317a45f0f9a283",
+      "id": "de2539c83738e5f2",
+      "taskId": "04",
+      "source": "composer-1",
+      "language": "js",
+      "rootDir": "ai-solutions/04/composer-1/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 73
+      }
+    },
+    {
+      "id": "7d0b32624ad7097c",
+      "taskId": "04",
+      "source": "sonnet-4.5",
+      "language": "python",
+      "rootDir": "ai-solutions/04/sonnet-4.5/python",
+      "entryHint": "main.py",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 78
+      }
+    },
+    {
+      "id": "1de096a102d73d72",
+      "taskId": "04",
+      "source": "sonnet-4.5",
+      "language": "rust",
+      "rootDir": "ai-solutions/04/sonnet-4.5/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 111
+      }
+    },
+    {
+      "id": "5d3a9dd0ae3be211",
+      "taskId": "04",
+      "source": "sonnet-4.5",
+      "language": "js",
+      "rootDir": "ai-solutions/04/sonnet-4.5/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 99
+      }
+    },
+    {
+      "id": "f2043473fbeaaead",
       "taskId": "04",
       "source": "gemini-3-pro",
       "language": "python",
@@ -898,7 +862,19 @@
       }
     },
     {
-      "id": "b09120a9fca00429",
+      "id": "f0374d015c00e39d",
+      "taskId": "04",
+      "source": "gemini-3-pro",
+      "language": "rust",
+      "rootDir": "ai-solutions/04/gemini-3-pro/rust",
+      "entryHint": "Cargo.toml",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 96
+      }
+    },
+    {
+      "id": "9b65ec7632c8565e",
       "taskId": "04",
       "source": "gemini-3-pro",
       "language": "js",
@@ -910,276 +886,205 @@
       }
     },
     {
-      "id": "03a8f2784e27ec5c",
+      "id": "15d10fe028b72233",
       "taskId": "04",
-      "source": "gemini-3-pro",
+      "source": "gpt-5.1-codex",
+      "language": "python",
+      "rootDir": "ai-solutions/04/gpt-5.1-codex/python",
+      "entryHint": "main.py",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 93
+      }
+    },
+    {
+      "id": "f09db390a0514c23",
+      "taskId": "04",
+      "source": "gpt-5.1-codex",
       "language": "rust",
-      "rootDir": "ai-solutions/04/gemini-3-pro/rust",
+      "rootDir": "ai-solutions/04/gpt-5.1-codex/rust",
       "entryHint": "Cargo.toml",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 96
+        "totalLoc": 111
+      }
+    },
+    {
+      "id": "04307b1cbcea0298",
+      "taskId": "04",
+      "source": "gpt-5.1-codex",
+      "language": "js",
+      "rootDir": "ai-solutions/04/gpt-5.1-codex/js",
+      "entryHint": "index.js",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 105
       }
     }
   ],
   "runs": [
     {
-      "solutionId": "5f4f4a88dba0bd43",
+      "solutionId": "94f446b7958b2eac",
       "taskId": "01",
       "source": "human",
       "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/01/python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/01/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 31.98,
+      "executionTimeMs": 47.89,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 49
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "c681b37e43615b14",
+      "solutionId": "17474fae15ab0fdd",
       "taskId": "01",
       "source": "human",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/01/js",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/01/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 27.65,
+      "executionTimeMs": 13.08,
+      "stdout": "1120\n6554",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 63
+      },
+      "baselineSolutionId": "94f446b7958b2eac",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "1c39001ca402e525",
+      "taskId": "01",
+      "source": "human",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/01/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 45.88,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 59
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "fe6882b56bf4427b",
-      "taskId": "01",
-      "source": "human",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/01/rust",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 556.47,
-      "stdout": "1120\n6554",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 63
-      },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "da643517ec55caef",
+      "solutionId": "f192e5d38c0982c6",
       "taskId": "01",
       "source": "opus-4.5",
       "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/opus-4.5/python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/opus-4.5/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 21.77,
+      "executionTimeMs": 26.72,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 93
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "0be3da14ec6b8cc9",
-      "taskId": "01",
-      "source": "opus-4.5",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/opus-4.5/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 52.38,
-      "stdout": "1120\n6554",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 101
-      },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "24858dbac254f60b",
+      "solutionId": "db94752e801ea736",
       "taskId": "01",
       "source": "opus-4.5",
       "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/opus-4.5/rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/opus-4.5/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 273.77,
+      "executionTimeMs": 12.92,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 95
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "55395b99a235279c",
+      "solutionId": "b066bcc005b42eee",
       "taskId": "01",
-      "source": "gpt-5.1-codex",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/gpt-5.1-codex/python",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 52.83,
-      "stdout": "1120\n6554",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 93
-      },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "095a0f7409efa2bf",
-      "taskId": "01",
-      "source": "gpt-5.1-codex",
+      "source": "opus-4.5",
       "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/gpt-5.1-codex/js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/opus-4.5/js",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 34.31,
+      "executionTimeMs": 41.24,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 93
+        "totalLoc": 101
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "158bf39eab4af9db",
+      "solutionId": "f6cccb63452a128b",
       "taskId": "01",
-      "source": "gpt-5.1-codex",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/gpt-5.1-codex/rust",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 262.06,
-      "stdout": "1120\n6554",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 100
-      },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "c616110feabe0d97",
-      "taskId": "01",
-      "source": "sonnet-4.5",
+      "source": "composer-1",
       "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/sonnet-4.5/python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/composer-1/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 14.1,
-      "stdout": "1120\n6554",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 55
-      },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "9574e15723811fd3",
-      "taskId": "01",
-      "source": "sonnet-4.5",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/sonnet-4.5/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 27.45,
+      "executionTimeMs": 55.78,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 63
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "7d864f61e8c1568a",
-      "taskId": "01",
-      "source": "sonnet-4.5",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/sonnet-4.5/rust",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 272.99,
-      "stdout": "1120\n6554",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 2,
-        "totalLoc": 122
-      },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "0400a81abe9f91f6",
+      "solutionId": "637248e61946d923",
       "taskId": "01",
       "source": "composer-1",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/composer-1/python",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/composer-1/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 49.21,
+      "executionTimeMs": 14.66,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 63
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "60d237259d397466",
+      "solutionId": "d710b63197d6db39",
       "taskId": "01",
       "source": "composer-1",
       "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/composer-1/js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/composer-1/js",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 35.99,
+      "executionTimeMs": 55.76,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1187,57 +1092,114 @@
         "totalLoc": 64,
         "dependencyCount": 1
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "b4dd309cb5260fc9",
+      "solutionId": "7bd3f5f7f581536b",
       "taskId": "01",
-      "source": "composer-1",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/composer-1/rust",
+      "source": "sonnet-4.5",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/sonnet-4.5/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 298.52,
+      "executionTimeMs": 26.91,
+      "stdout": "1120\n6554",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 55
+      },
+      "baselineSolutionId": "94f446b7958b2eac",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "7a0aafa30c44ada4",
+      "taskId": "01",
+      "source": "sonnet-4.5",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/sonnet-4.5/rust",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 12.93,
+      "stdout": "1120\n6554",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 2,
+        "totalLoc": 122
+      },
+      "baselineSolutionId": "94f446b7958b2eac",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "caddf217db944e04",
+      "taskId": "01",
+      "source": "sonnet-4.5",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/sonnet-4.5/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 40.5,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 63
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "9453f99abb38a417",
+      "solutionId": "4c251f6d5d25783f",
       "taskId": "01",
       "source": "gemini-3-pro",
       "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/gemini-3-pro/python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/gemini-3-pro/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 31,
+      "executionTimeMs": 57.64,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 45
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "a26c5b850adb091e",
+      "solutionId": "fb02376b3e45c920",
       "taskId": "01",
       "source": "gemini-3-pro",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/gemini-3-pro/js",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/gemini-3-pro/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 24.27,
+      "executionTimeMs": 14.77,
+      "stdout": "1120\n6554",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 54
+      },
+      "baselineSolutionId": "94f446b7958b2eac",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "ef2fc4e69c2bee0e",
+      "taskId": "01",
+      "source": "gemini-3-pro",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/gemini-3-pro/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 43.09,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1245,114 +1207,171 @@
         "totalLoc": 50,
         "dependencyCount": 0
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "bdb0ba054400827c",
+      "solutionId": "09e004ec37e19423",
       "taskId": "01",
-      "source": "gemini-3-pro",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/01/gemini-3-pro/rust",
+      "source": "gpt-5.1-codex",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/gpt-5.1-codex/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 290.05,
+      "executionTimeMs": 59.13,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 54
+        "totalLoc": 93
       },
-      "baselineSolutionId": "5f4f4a88dba0bd43",
+      "baselineSolutionId": "94f446b7958b2eac",
       "matchesBaseline": true
     },
     {
-      "solutionId": "672c59fcb1c88c35",
-      "taskId": "02",
-      "source": "human",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/02/python",
+      "solutionId": "c0f1c0cfe243fbd6",
+      "taskId": "01",
+      "source": "gpt-5.1-codex",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/gpt-5.1-codex/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 1325.51,
+      "executionTimeMs": 12.97,
+      "stdout": "1120\n6554",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 100
+      },
+      "baselineSolutionId": "94f446b7958b2eac",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "b34e529d5a765fb7",
+      "taskId": "01",
+      "source": "gpt-5.1-codex",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/01/gpt-5.1-codex/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 41.36,
+      "stdout": "1120\n6554",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 93
+      },
+      "baselineSolutionId": "94f446b7958b2eac",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "b3d8b8e35fdd1bab",
+      "taskId": "02",
+      "source": "human",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/02/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 2064.64,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 38
       },
-      "baselineSolutionId": "672c59fcb1c88c35",
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
       "matchesBaseline": true
     },
     {
-      "solutionId": "c3a8c0ab08c5da86",
-      "taskId": "02",
-      "source": "human",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/02/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 290.75,
-      "stdout": "31839939622\n41662374059",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 29
-      },
-      "baselineSolutionId": "672c59fcb1c88c35",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "0af169335795f421",
+      "solutionId": "c5fbcd9871a0be1a",
       "taskId": "02",
       "source": "human",
       "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/02/rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/02/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 515.36,
+      "executionTimeMs": 291.86,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 69
       },
-      "baselineSolutionId": "672c59fcb1c88c35",
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
       "matchesBaseline": true
     },
     {
-      "solutionId": "4faa061209a6ede7",
+      "solutionId": "bc5aa4d18ac46aed",
       "taskId": "02",
-      "source": "opus-4.5",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/opus-4.5/python",
+      "source": "human",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/02/js",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 1269.76,
+      "executionTimeMs": 548.06,
+      "stdout": "31839939622\n41662374059",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 29
+      },
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "05ce05dc7a6caff7",
+      "taskId": "02",
+      "source": "opus-4.5",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/opus-4.5/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 2429.28,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 67
       },
-      "baselineSolutionId": "672c59fcb1c88c35",
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
       "matchesBaseline": true
     },
     {
-      "solutionId": "1e0aaef51cd94231",
+      "solutionId": "9b015379fa9818eb",
       "taskId": "02",
       "source": "opus-4.5",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/opus-4.5/js",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/opus-4.5/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 262.21,
+      "executionTimeMs": 308,
+      "stdout": "31839939622\n41662374059",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 83
+      },
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "895d19a6f527b75c",
+      "taskId": "02",
+      "source": "opus-4.5",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/opus-4.5/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 468.1,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1360,172 +1379,57 @@
         "totalLoc": 75,
         "dependencyCount": 0
       },
-      "baselineSolutionId": "672c59fcb1c88c35",
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
       "matchesBaseline": true
     },
     {
-      "solutionId": "2dc9f39e1c9fdb64",
-      "taskId": "02",
-      "source": "opus-4.5",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/opus-4.5/rust",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 673.62,
-      "stdout": "31839939622\n41662374059",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 83
-      },
-      "baselineSolutionId": "672c59fcb1c88c35",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "d39a86bba12e5337",
-      "taskId": "02",
-      "source": "gpt-5.1-codex",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/gpt-5.1-codex/python",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 1029.89,
-      "stdout": "31839939622\n41662374059",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 64
-      },
-      "baselineSolutionId": "672c59fcb1c88c35",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "53b83c3bc9f5372e",
-      "taskId": "02",
-      "source": "gpt-5.1-codex",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/gpt-5.1-codex/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 259.3,
-      "stdout": "31839939622\n41662374059",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 63,
-        "dependencyCount": 0
-      },
-      "baselineSolutionId": "672c59fcb1c88c35",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "1c2550e3db1d1947",
-      "taskId": "02",
-      "source": "gpt-5.1-codex",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/gpt-5.1-codex/rust",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 549.45,
-      "stdout": "31839939622\n41662374059",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 80
-      },
-      "baselineSolutionId": "672c59fcb1c88c35",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "2fc5cef65b51b4a1",
-      "taskId": "02",
-      "source": "sonnet-4.5",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/sonnet-4.5/python",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 1324.74,
-      "stdout": "31839939622\n41662374059",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 58
-      },
-      "baselineSolutionId": "672c59fcb1c88c35",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "05b50267e96f1d8c",
-      "taskId": "02",
-      "source": "sonnet-4.5",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/sonnet-4.5/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 269.07,
-      "stdout": "31839939622\n41662374059",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 63
-      },
-      "baselineSolutionId": "672c59fcb1c88c35",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "b9555b44f0a91d67",
-      "taskId": "02",
-      "source": "sonnet-4.5",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/sonnet-4.5/rust",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 606.03,
-      "stdout": "31839939622\n41662374059",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 80
-      },
-      "baselineSolutionId": "672c59fcb1c88c35",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "d6c618f118a9476d",
+      "solutionId": "ece747412e86913e",
       "taskId": "02",
       "source": "composer-1",
       "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/composer-1/python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/composer-1/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 1819.77,
+      "executionTimeMs": 3523.7,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 78
       },
-      "baselineSolutionId": "672c59fcb1c88c35",
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
       "matchesBaseline": true
     },
     {
-      "solutionId": "b281f8a6ec659997",
+      "solutionId": "a07b34fdba820d8a",
       "taskId": "02",
       "source": "composer-1",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/composer-1/js",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/composer-1/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 230.31,
+      "executionTimeMs": 165.19,
+      "stdout": "31839939622\n41662374059",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 106
+      },
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "839af44b75d73767",
+      "taskId": "02",
+      "source": "composer-1",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/composer-1/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 422.44,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1533,57 +1437,114 @@
         "totalLoc": 83,
         "dependencyCount": 0
       },
-      "baselineSolutionId": "672c59fcb1c88c35",
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
       "matchesBaseline": true
     },
     {
-      "solutionId": "44c9588c9037e41a",
+      "solutionId": "c56a56a5c97c0b84",
       "taskId": "02",
-      "source": "composer-1",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/composer-1/rust",
+      "source": "sonnet-4.5",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/sonnet-4.5/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 503.46,
+      "executionTimeMs": 2558.04,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 106
+        "totalLoc": 58
       },
-      "baselineSolutionId": "672c59fcb1c88c35",
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
       "matchesBaseline": true
     },
     {
-      "solutionId": "3923766340bd3009",
+      "solutionId": "67e5cbaf3ebde151",
       "taskId": "02",
-      "source": "gemini-3-pro",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/gemini-3-pro/python",
+      "source": "sonnet-4.5",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/sonnet-4.5/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 1035.21,
+      "executionTimeMs": 318.14,
+      "stdout": "31839939622\n41662374059",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 80
+      },
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "3ad5ab7eb406449f",
+      "taskId": "02",
+      "source": "sonnet-4.5",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/sonnet-4.5/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 532.18,
+      "stdout": "31839939622\n41662374059",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 63
+      },
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "5755ada54603245a",
+      "taskId": "02",
+      "source": "gemini-3-pro",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/gemini-3-pro/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 1959.79,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 51
       },
-      "baselineSolutionId": "672c59fcb1c88c35",
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
       "matchesBaseline": true
     },
     {
-      "solutionId": "abaf0e329c068dd3",
+      "solutionId": "4ec17a3076f31a4e",
       "taskId": "02",
       "source": "gemini-3-pro",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/gemini-3-pro/js",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/gemini-3-pro/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 263.06,
+      "executionTimeMs": 274.42,
+      "stdout": "31839939622\n41662374059",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 55
+      },
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "bea2810f67f56763",
+      "taskId": "02",
+      "source": "gemini-3-pro",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/gemini-3-pro/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 500.78,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1591,709 +1552,749 @@
         "totalLoc": 55,
         "dependencyCount": 0
       },
-      "baselineSolutionId": "672c59fcb1c88c35",
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
       "matchesBaseline": true
     },
     {
-      "solutionId": "98a9f65e22382a24",
+      "solutionId": "f18be2d3b9ffda23",
       "taskId": "02",
-      "source": "gemini-3-pro",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/02/gemini-3-pro/rust",
+      "source": "gpt-5.1-codex",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/gpt-5.1-codex/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 567.5,
+      "executionTimeMs": 1936.16,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 55
+        "totalLoc": 64
       },
-      "baselineSolutionId": "672c59fcb1c88c35",
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
       "matchesBaseline": true
     },
     {
-      "solutionId": "635d49510faba369",
-      "taskId": "03",
-      "source": "human",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/03/python",
+      "solutionId": "f6f068ad4cba6381",
+      "taskId": "02",
+      "source": "gpt-5.1-codex",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/gpt-5.1-codex/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 15.67,
+      "executionTimeMs": 279.09,
+      "stdout": "31839939622\n41662374059",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 80
+      },
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "5e1fffe3ff3f78d7",
+      "taskId": "02",
+      "source": "gpt-5.1-codex",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/02/gpt-5.1-codex/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 497.97,
+      "stdout": "31839939622\n41662374059",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 63,
+        "dependencyCount": 0
+      },
+      "baselineSolutionId": "b3d8b8e35fdd1bab",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "927c70361921b71a",
+      "taskId": "03",
+      "source": "human",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/03/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 34.98,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 36
       },
-      "baselineSolutionId": "635d49510faba369",
+      "baselineSolutionId": "927c70361921b71a",
       "matchesBaseline": true
     },
     {
-      "solutionId": "6e6f11a7c14612ae",
-      "taskId": "03",
-      "source": "human",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/03/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 26,
-      "stdout": "17144\n170371185255900",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 52
-      },
-      "baselineSolutionId": "635d49510faba369",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "38da928bbbda6061",
+      "solutionId": "4ba9f6e5758c7876",
       "taskId": "03",
       "source": "human",
       "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/03/rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/03/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 318.22,
+      "executionTimeMs": 12.96,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 41
       },
-      "baselineSolutionId": "635d49510faba369",
+      "baselineSolutionId": "927c70361921b71a",
       "matchesBaseline": true
     },
     {
-      "solutionId": "f4b5c86c5bda9073",
+      "solutionId": "2bb80b50c6a6746e",
       "taskId": "03",
-      "source": "opus-4.5",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/opus-4.5/python",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 21.7,
-      "stdout": "17144\n170371185255900",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 43
-      },
-      "baselineSolutionId": "635d49510faba369",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "334f0f08a8695ba7",
-      "taskId": "03",
-      "source": "opus-4.5",
+      "source": "human",
       "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/opus-4.5/js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/03/js",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 31.2,
-      "stdout": "17144\n170371185255900",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 47
-      },
-      "baselineSolutionId": "635d49510faba369",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "9ee9e374f977555b",
-      "taskId": "03",
-      "source": "opus-4.5",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/opus-4.5/rust",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 250.79,
-      "stdout": "17144\n170371185255900",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 47
-      },
-      "baselineSolutionId": "635d49510faba369",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "4a622347e2b9e1bc",
-      "taskId": "03",
-      "source": "gpt-5.1-codex",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/gpt-5.1-codex/python",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 36.89,
-      "stdout": "17144\n170371185255900",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 57
-      },
-      "baselineSolutionId": "635d49510faba369",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "49c0d705e03ed860",
-      "taskId": "03",
-      "source": "gpt-5.1-codex",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/gpt-5.1-codex/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 31.48,
-      "stdout": "17144\n170371185255900",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 45
-      },
-      "baselineSolutionId": "635d49510faba369",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "93c2056b8280db51",
-      "taskId": "03",
-      "source": "gpt-5.1-codex",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/gpt-5.1-codex/rust",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 266.49,
-      "stdout": "17144\n170371185255900",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 51
-      },
-      "baselineSolutionId": "635d49510faba369",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "1898ade67305ca3a",
-      "taskId": "03",
-      "source": "sonnet-4.5",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/sonnet-4.5/python",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 23.75,
-      "stdout": "17144\n170371185255900",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 46
-      },
-      "baselineSolutionId": "635d49510faba369",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "84913f440ab40493",
-      "taskId": "03",
-      "source": "sonnet-4.5",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/sonnet-4.5/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 32.78,
+      "executionTimeMs": 45.85,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 52
       },
-      "baselineSolutionId": "635d49510faba369",
+      "baselineSolutionId": "927c70361921b71a",
       "matchesBaseline": true
     },
     {
-      "solutionId": "0409c6edf33feadd",
+      "solutionId": "fef11302eeeb4f18",
       "taskId": "03",
-      "source": "sonnet-4.5",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/sonnet-4.5/rust",
+      "source": "opus-4.5",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/opus-4.5/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 249.09,
+      "executionTimeMs": 27.96,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 59
+        "totalLoc": 43
       },
-      "baselineSolutionId": "635d49510faba369",
+      "baselineSolutionId": "927c70361921b71a",
       "matchesBaseline": true
     },
     {
-      "solutionId": "ff56f2a8aae52203",
+      "solutionId": "edb27b11041dcaba",
       "taskId": "03",
-      "source": "composer-1",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/composer-1/python",
+      "source": "opus-4.5",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/opus-4.5/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 21.8,
+      "executionTimeMs": 12.89,
+      "stdout": "17144\n170371185255900",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 47
+      },
+      "baselineSolutionId": "927c70361921b71a",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "9d5ffacc6df7a169",
+      "taskId": "03",
+      "source": "opus-4.5",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/opus-4.5/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 43.56,
+      "stdout": "17144\n170371185255900",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 47
+      },
+      "baselineSolutionId": "927c70361921b71a",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "1f4116af6f0e6aaf",
+      "taskId": "03",
+      "source": "composer-1",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/composer-1/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 31.15,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 48
       },
-      "baselineSolutionId": "635d49510faba369",
+      "baselineSolutionId": "927c70361921b71a",
       "matchesBaseline": true
     },
     {
-      "solutionId": "1cb23d8e1598a1bd",
-      "taskId": "03",
-      "source": "composer-1",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/composer-1/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 27.67,
-      "stdout": "17144\n170371185255900",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 54
-      },
-      "baselineSolutionId": "635d49510faba369",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "6218fb032be5b11e",
+      "solutionId": "53b341ea03d8735d",
       "taskId": "03",
       "source": "composer-1",
       "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/composer-1/rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/composer-1/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 295.98,
+      "executionTimeMs": 12.82,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 58
       },
-      "baselineSolutionId": "635d49510faba369",
+      "baselineSolutionId": "927c70361921b71a",
       "matchesBaseline": true
     },
     {
-      "solutionId": "b1fe255bcbbf7155",
+      "solutionId": "0c520c0cead39cbb",
       "taskId": "03",
-      "source": "gemini-3-pro",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/gemini-3-pro/python",
+      "source": "composer-1",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/composer-1/js",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 22.82,
+      "executionTimeMs": 40.38,
+      "stdout": "17144\n170371185255900",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 54
+      },
+      "baselineSolutionId": "927c70361921b71a",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "1261631621fbc82d",
+      "taskId": "03",
+      "source": "sonnet-4.5",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/sonnet-4.5/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 27.49,
+      "stdout": "17144\n170371185255900",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 46
+      },
+      "baselineSolutionId": "927c70361921b71a",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "8206c24cc947502b",
+      "taskId": "03",
+      "source": "sonnet-4.5",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/sonnet-4.5/rust",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 13.03,
+      "stdout": "17144\n170371185255900",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 59
+      },
+      "baselineSolutionId": "927c70361921b71a",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "cf29abad99e206b1",
+      "taskId": "03",
+      "source": "sonnet-4.5",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/sonnet-4.5/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 39.38,
+      "stdout": "17144\n170371185255900",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 52
+      },
+      "baselineSolutionId": "927c70361921b71a",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "ceef1f36856b76d9",
+      "taskId": "03",
+      "source": "gemini-3-pro",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/gemini-3-pro/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 32.32,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 61
       },
-      "baselineSolutionId": "635d49510faba369",
+      "baselineSolutionId": "927c70361921b71a",
       "matchesBaseline": true
     },
     {
-      "solutionId": "8c7e98567f68ad26",
-      "taskId": "03",
-      "source": "gemini-3-pro",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/gemini-3-pro/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 23.78,
-      "stdout": "17144\n170371185255900",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 62
-      },
-      "baselineSolutionId": "635d49510faba369",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "49efe921ed9bb921",
+      "solutionId": "473c4c4afe840422",
       "taskId": "03",
       "source": "gemini-3-pro",
       "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/03/gemini-3-pro/rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/gemini-3-pro/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 250.56,
+      "executionTimeMs": 12.86,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 68
       },
-      "baselineSolutionId": "635d49510faba369",
+      "baselineSolutionId": "927c70361921b71a",
       "matchesBaseline": true
     },
     {
-      "solutionId": "81ad21428cb64a3d",
-      "taskId": "04",
-      "source": "human",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/04/python",
+      "solutionId": "0f9525e25750824f",
+      "taskId": "03",
+      "source": "gemini-3-pro",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/gemini-3-pro/js",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 204.86,
+      "executionTimeMs": 40.42,
+      "stdout": "17144\n170371185255900",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 62
+      },
+      "baselineSolutionId": "927c70361921b71a",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "01f3c059efecaaee",
+      "taskId": "03",
+      "source": "gpt-5.1-codex",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/gpt-5.1-codex/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 41.45,
+      "stdout": "17144\n170371185255900",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 57
+      },
+      "baselineSolutionId": "927c70361921b71a",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "2ded43d0c0306e4c",
+      "taskId": "03",
+      "source": "gpt-5.1-codex",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/gpt-5.1-codex/rust",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 12.93,
+      "stdout": "17144\n170371185255900",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 51
+      },
+      "baselineSolutionId": "927c70361921b71a",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "a571f0aaea4bd6de",
+      "taskId": "03",
+      "source": "gpt-5.1-codex",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/03/gpt-5.1-codex/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 40.86,
+      "stdout": "17144\n170371185255900",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 45
+      },
+      "baselineSolutionId": "927c70361921b71a",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "382facefa81f8522",
+      "taskId": "04",
+      "source": "human",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/04/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 380.72,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 86
       },
-      "baselineSolutionId": "81ad21428cb64a3d",
+      "baselineSolutionId": "382facefa81f8522",
       "matchesBaseline": true
     },
     {
-      "solutionId": "a29cef224f09337b",
+      "solutionId": "6479bf6d08a2133f",
       "taskId": "04",
       "source": "human",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/04/js",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/04/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 78.74,
+      "executionTimeMs": 17.42,
+      "stdout": "1445\n8317",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 113
+      },
+      "baselineSolutionId": "382facefa81f8522",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "8df45d7ae6824162",
+      "taskId": "04",
+      "source": "human",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/human-solutions/04/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 105.95,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 101
       },
-      "baselineSolutionId": "81ad21428cb64a3d",
+      "baselineSolutionId": "382facefa81f8522",
       "matchesBaseline": true
     },
     {
-      "solutionId": "23f7a6d6ac28d5eb",
-      "taskId": "04",
-      "source": "human",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/human-solutions/04/rust",
-      "success": false,
-      "exitCode": 101,
-      "timedOut": false,
-      "executionTimeMs": 259.96,
-      "stdout": "",
-      "stderr": "\nthread 'main' (689756) panicked at src/main.rs:4:65:\ncalled `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 113
-      },
-      "error": "\nthread 'main' (689756) panicked at src/main.rs:4:65:\ncalled `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: \"No such file or directory\" }\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace"
-    },
-    {
-      "solutionId": "b8f3a0ff41def20f",
+      "solutionId": "832c8224ab25bb6d",
       "taskId": "04",
       "source": "opus-4.5",
       "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/opus-4.5/python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/opus-4.5/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 222.91,
+      "executionTimeMs": 408.42,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 63
       },
-      "baselineSolutionId": "81ad21428cb64a3d",
+      "baselineSolutionId": "382facefa81f8522",
       "matchesBaseline": true
     },
     {
-      "solutionId": "865ccbdf1d0e550c",
-      "taskId": "04",
-      "source": "opus-4.5",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/opus-4.5/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 49.49,
-      "stdout": "1445\n8317",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 69
-      },
-      "baselineSolutionId": "81ad21428cb64a3d",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "9ac6878b6bc96ddb",
+      "solutionId": "e7e67755a182f97f",
       "taskId": "04",
       "source": "opus-4.5",
       "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/opus-4.5/rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/opus-4.5/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 282.62,
+      "executionTimeMs": 18.23,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 80
       },
-      "baselineSolutionId": "81ad21428cb64a3d",
+      "baselineSolutionId": "382facefa81f8522",
       "matchesBaseline": true
     },
     {
-      "solutionId": "3404cb3ddf4a564b",
+      "solutionId": "2d25c52eb9032521",
       "taskId": "04",
-      "source": "gpt-5.1-codex",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/gpt-5.1-codex/python",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 67.78,
-      "stdout": "1445\n8317",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 93
-      },
-      "baselineSolutionId": "81ad21428cb64a3d",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "90b037e7718b1969",
-      "taskId": "04",
-      "source": "gpt-5.1-codex",
+      "source": "opus-4.5",
       "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/gpt-5.1-codex/js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/opus-4.5/js",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 47.62,
+      "executionTimeMs": 93,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 105
+        "totalLoc": 69
       },
-      "baselineSolutionId": "81ad21428cb64a3d",
+      "baselineSolutionId": "382facefa81f8522",
       "matchesBaseline": true
     },
     {
-      "solutionId": "e7aeb05f2df57111",
-      "taskId": "04",
-      "source": "gpt-5.1-codex",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/gpt-5.1-codex/rust",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 349.06,
-      "stdout": "1445\n8317",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 111
-      },
-      "baselineSolutionId": "81ad21428cb64a3d",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "db3e5e8f9de6cb27",
-      "taskId": "04",
-      "source": "sonnet-4.5",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/sonnet-4.5/python",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 242.2,
-      "stdout": "1445\n8317",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 78
-      },
-      "baselineSolutionId": "81ad21428cb64a3d",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "7b49e34648dac463",
-      "taskId": "04",
-      "source": "sonnet-4.5",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/sonnet-4.5/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 69.59,
-      "stdout": "1445\n8317",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 99
-      },
-      "baselineSolutionId": "81ad21428cb64a3d",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "9ca3b68804f38efb",
-      "taskId": "04",
-      "source": "sonnet-4.5",
-      "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/sonnet-4.5/rust",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 355.87,
-      "stdout": "1445\n8317",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 111
-      },
-      "baselineSolutionId": "81ad21428cb64a3d",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "34ab5ff8cb96a5de",
+      "solutionId": "1253da2a3e3b67ef",
       "taskId": "04",
       "source": "composer-1",
       "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/composer-1/python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/composer-1/python",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 587.71,
+      "executionTimeMs": 822.48,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 59
       },
-      "baselineSolutionId": "81ad21428cb64a3d",
+      "baselineSolutionId": "382facefa81f8522",
       "matchesBaseline": true
     },
     {
-      "solutionId": "53804dcafdfa761f",
-      "taskId": "04",
-      "source": "composer-1",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/composer-1/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 70.58,
-      "stdout": "1445\n8317",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 73
-      },
-      "baselineSolutionId": "81ad21428cb64a3d",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "96f2467633707cdb",
+      "solutionId": "97a2ba1300306670",
       "taskId": "04",
       "source": "composer-1",
       "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/composer-1/rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/composer-1/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 288.29,
+      "executionTimeMs": 18.09,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 90
       },
-      "baselineSolutionId": "81ad21428cb64a3d",
+      "baselineSolutionId": "382facefa81f8522",
       "matchesBaseline": true
     },
     {
-      "solutionId": "b1317a45f0f9a283",
+      "solutionId": "de2539c83738e5f2",
       "taskId": "04",
-      "source": "gemini-3-pro",
-      "language": "python",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/gemini-3-pro/python",
+      "source": "composer-1",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/composer-1/js",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 249.36,
+      "executionTimeMs": 101.36,
+      "stdout": "1445\n8317",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 73
+      },
+      "baselineSolutionId": "382facefa81f8522",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "7d0b32624ad7097c",
+      "taskId": "04",
+      "source": "sonnet-4.5",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/sonnet-4.5/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 488.98,
+      "stdout": "1445\n8317",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 78
+      },
+      "baselineSolutionId": "382facefa81f8522",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "1de096a102d73d72",
+      "taskId": "04",
+      "source": "sonnet-4.5",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/sonnet-4.5/rust",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 19.47,
+      "stdout": "1445\n8317",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 111
+      },
+      "baselineSolutionId": "382facefa81f8522",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "5d3a9dd0ae3be211",
+      "taskId": "04",
+      "source": "sonnet-4.5",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/sonnet-4.5/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 109.34,
+      "stdout": "1445\n8317",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 99
+      },
+      "baselineSolutionId": "382facefa81f8522",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "f2043473fbeaaead",
+      "taskId": "04",
+      "source": "gemini-3-pro",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/gemini-3-pro/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 448.54,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 67
       },
-      "baselineSolutionId": "81ad21428cb64a3d",
+      "baselineSolutionId": "382facefa81f8522",
       "matchesBaseline": true
     },
     {
-      "solutionId": "b09120a9fca00429",
-      "taskId": "04",
-      "source": "gemini-3-pro",
-      "language": "js",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/gemini-3-pro/js",
-      "success": true,
-      "exitCode": 0,
-      "timedOut": false,
-      "executionTimeMs": 45.99,
-      "stdout": "1445\n8317",
-      "stderr": "",
-      "codeStats": {
-        "fileCount": 1,
-        "totalLoc": 87
-      },
-      "baselineSolutionId": "81ad21428cb64a3d",
-      "matchesBaseline": true
-    },
-    {
-      "solutionId": "03a8f2784e27ec5c",
+      "solutionId": "f0374d015c00e39d",
       "taskId": "04",
       "source": "gemini-3-pro",
       "language": "rust",
-      "rootDir": "/Users/anthonyhumphreys/Code/advent-of-code/ai-solutions/04/gemini-3-pro/rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/gemini-3-pro/rust",
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 305.39,
+      "executionTimeMs": 20.21,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
         "totalLoc": 96
       },
-      "baselineSolutionId": "81ad21428cb64a3d",
+      "baselineSolutionId": "382facefa81f8522",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "9b65ec7632c8565e",
+      "taskId": "04",
+      "source": "gemini-3-pro",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/gemini-3-pro/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 76.47,
+      "stdout": "1445\n8317",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 87
+      },
+      "baselineSolutionId": "382facefa81f8522",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "15d10fe028b72233",
+      "taskId": "04",
+      "source": "gpt-5.1-codex",
+      "language": "python",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/gpt-5.1-codex/python",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 64.07,
+      "stdout": "1445\n8317",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 93
+      },
+      "baselineSolutionId": "382facefa81f8522",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "f09db390a0514c23",
+      "taskId": "04",
+      "source": "gpt-5.1-codex",
+      "language": "rust",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/gpt-5.1-codex/rust",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 16.99,
+      "stdout": "1445\n8317",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 111
+      },
+      "baselineSolutionId": "382facefa81f8522",
+      "matchesBaseline": true
+    },
+    {
+      "solutionId": "04307b1cbcea0298",
+      "taskId": "04",
+      "source": "gpt-5.1-codex",
+      "language": "js",
+      "rootDir": "/home/runner/work/advent-of-code-2025/advent-of-code-2025/ai-solutions/04/gpt-5.1-codex/js",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "executionTimeMs": 79.03,
+      "stdout": "1445\n8317",
+      "stderr": "",
+      "codeStats": {
+        "fileCount": 1,
+        "totalLoc": 105
+      },
+      "baselineSolutionId": "382facefa81f8522",
       "matchesBaseline": true
     }
   ]
