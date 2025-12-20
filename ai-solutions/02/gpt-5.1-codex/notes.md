@@ -1,0 +1,3 @@
+- Codex one shotted
+- I forget how slow this model is
+- created a notes file again - curious as notes.md doesn't show in the thinking output anywhere - excluded using .cursorignore but of course the model could still list it. Wonder why this is?

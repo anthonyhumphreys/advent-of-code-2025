@@ -1,0 +1,5 @@
+- One shot
+- had to iterate to fix file paths again, otherwise just got on with it, chattily as ever
+- created its own notes file
+- Tested using the test cases in the example
+- Ran each solution individually

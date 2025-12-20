@@ -1,0 +1,6 @@
+Tokens used: 173K
+
+- Gemini one-shotted the solution
+- ran each solution individually and compared the results again
+- used todo tool
+- produced useful output in notes.md curiously (renamed to [geminis-notes.md](geminis-notes.md))
