@@ -1,6 +1,6 @@
 from pathlib import Path
 
-input_text = Path("../../../inputs/06.txt").read_text().rstrip()
+input_text = Path("../../../../inputs/06.txt").read_text().rstrip()
 
 
 def solve_part1(input_text: str) -> int:

@@ -109,7 +109,7 @@ fn solve_part2(input: &str) -> i64 {
 }
 
 fn main() {
-    let input = fs::read_to_string("../../../inputs/06.txt").unwrap();
+    let input = fs::read_to_string("../../../../inputs/06.txt").unwrap();
     let input = input.trim_end();
 
     println!("{}", solve_part1(input));
