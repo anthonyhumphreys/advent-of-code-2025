@@ -52,8 +52,8 @@ def main():
     input_text = input_path.read_text()
 
     part1, part2 = solve(input_text)
-    print(f'Part 1: {part1}')
-    print(f'Part 2: {part2}')
+    print(part1)
+    print(part2)
 
 
 if __name__ == '__main__':

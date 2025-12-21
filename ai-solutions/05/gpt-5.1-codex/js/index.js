@@ -106,8 +106,8 @@ function main() {
   const part1 = solvePart1(ids, mergedRanges);
   const part2 = solvePart2(mergedRanges);
 
-  console.log(`Part 1: ${part1}`);
-  console.log(`Part 2: ${part2}`);
+  console.log(part1);
+  console.log(part2);
 }
 
 main();

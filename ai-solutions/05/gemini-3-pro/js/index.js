@@ -74,8 +74,8 @@ function main() {
   
   try {
     const { ranges, ids } = parseInput(inputPath);
-    console.log(`Part 1: ${solvePart1(ranges, ids)}`);
-    console.log(`Part 2: ${solvePart2(ranges)}`);
+    console.log(solvePart1(ranges, ids));
+    console.log(solvePart2(ranges));
   } catch (err) {
     console.error("Error reading or processing input:", err);
   }

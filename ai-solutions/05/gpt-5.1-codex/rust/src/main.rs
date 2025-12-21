@@ -124,8 +124,8 @@ fn main() {
     let part1 = count_fresh(&ids, &merged);
     let part2 = total_fresh(&merged);
 
-    println!("Part 1: {}", part1);
-    println!("Part 2: {}", part2);
+    println!("{}", part1);
+    println!("{}", part2);
 }
 
 

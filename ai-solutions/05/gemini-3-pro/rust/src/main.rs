@@ -105,7 +105,7 @@ fn main() {
 
     let (ranges, ids) = parse_input(path_str);
 
-    println!("Part 1: {}", solve_part1(&ranges, &ids));
-    println!("Part 2: {}", solve_part2(&ranges));
+    println!("{}", solve_part1(&ranges, &ids));
+    println!("{}", solve_part2(&ranges));
 }
 

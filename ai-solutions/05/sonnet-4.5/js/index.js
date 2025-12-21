@@ -58,6 +58,6 @@ function part2(input) {
 const inputPath = path.join(__dirname, '../../../../inputs/05.txt');
 const input = fs.readFileSync(inputPath, 'utf-8');
 
-console.log('Part 1:', part1(input));
-console.log('Part 2:', part2(input));
+console.log(part1(input));
+console.log(part2(input));
 

@@ -76,7 +76,7 @@ fn main() {
     let input = fs::read_to_string("../../../../inputs/05.txt")
         .expect("Failed to read input file");
     
-    println!("Part 1: {}", part1(&input));
-    println!("Part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 

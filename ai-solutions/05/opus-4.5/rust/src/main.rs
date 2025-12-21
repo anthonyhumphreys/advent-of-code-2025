@@ -65,7 +65,7 @@ fn main() {
         .unwrap_or_else(|_| fs::read_to_string("inputs/05.txt").expect("Failed to read input"));
 
     let (part1, part2) = solve(&input);
-    println!("Part 1: {}", part1);
-    println!("Part 2: {}", part2);
+    println!("{}", part1);
+    println!("{}", part2);
 }
 

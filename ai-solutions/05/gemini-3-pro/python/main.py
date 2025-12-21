@@ -72,8 +72,8 @@ def main():
             
     ranges, ids = parse_input(input_path)
     
-    print(f"Part 1: {solve_part1(ranges, ids)}")
-    print(f"Part 2: {solve_part2(ranges)}")
+    print(solve_part1(ranges, ids))
+    print(solve_part2(ranges))
 
 if __name__ == "__main__":
     main()

@@ -43,6 +43,6 @@ if __name__ == '__main__':
     with open('../../../../inputs/05.txt', 'r') as f:
         input_text = f.read()
     
-    print('Part 1:', part1(input_text))
-    print('Part 2:', part2(input_text))
+    print(part1(input_text))
+    print(part2(input_text))
 

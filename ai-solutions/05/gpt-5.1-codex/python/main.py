@@ -88,8 +88,8 @@ def main() -> None:
     part1 = count_fresh(ids, merged)
     part2 = total_fresh_ids(merged)
 
-    print(f"Part 1: {part1}")
-    print(f"Part 2: {part2}")
+    print(part1)
+    print(part2)
 
 
 if __name__ == "__main__":

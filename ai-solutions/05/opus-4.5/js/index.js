@@ -64,5 +64,5 @@ const inputPath = join(__dirname, '..', '..', '..', '..', 'inputs', '05.txt');
 const input = readFileSync(inputPath, 'utf8');
 
 const { part1, part2 } = solve(input);
-console.log('Part 1:', part1);
-console.log('Part 2:', part2);
+console.log(part1);
+console.log(part2);
