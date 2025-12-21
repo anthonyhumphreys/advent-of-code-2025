@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2025-12-21T12:36:31.684Z",
-    "gitSha": "6a958ca13320141724113d7c8e1934c98806a1f9",
+    "generatedAt": "2025-12-21T12:44:29.751Z",
+    "gitSha": "4619b0f18e5a2b92c0d50b6cb0daca11b5300299",
     "runner": {
       "name": "bun-runner",
       "version": "0.1.0"
@@ -936,7 +936,7 @@
       "entryHint": "index.js",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 24
+        "totalLoc": 46
       }
     }
   ],
@@ -950,7 +950,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 38.75,
+      "executionTimeMs": 214.86,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -969,7 +969,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 7.03,
+      "executionTimeMs": 13.03,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -988,7 +988,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 38.23,
+      "executionTimeMs": 45.54,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1007,7 +1007,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 19.49,
+      "executionTimeMs": 26.24,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1026,7 +1026,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 7.06,
+      "executionTimeMs": 12.56,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1045,7 +1045,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 31.93,
+      "executionTimeMs": 39.65,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1064,7 +1064,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 46.49,
+      "executionTimeMs": 54.61,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1083,7 +1083,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 8.6,
+      "executionTimeMs": 14.67,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1102,7 +1102,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 45.7,
+      "executionTimeMs": 54.79,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1122,7 +1122,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 19.49,
+      "executionTimeMs": 25.82,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1141,7 +1141,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 7.25,
+      "executionTimeMs": 12.81,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1160,7 +1160,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 35.52,
+      "executionTimeMs": 40.4,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1179,7 +1179,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 48.21,
+      "executionTimeMs": 57.14,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1198,7 +1198,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 8.77,
+      "executionTimeMs": 14.7,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1217,7 +1217,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 36.23,
+      "executionTimeMs": 42.74,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1237,7 +1237,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 46.81,
+      "executionTimeMs": 121.11,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1256,7 +1256,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 7.15,
+      "executionTimeMs": 12.56,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1275,7 +1275,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 33.41,
+      "executionTimeMs": 39.98,
       "stdout": "1120\n6554",
       "stderr": "",
       "codeStats": {
@@ -1294,7 +1294,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 1969.76,
+      "executionTimeMs": 2054.84,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1313,7 +1313,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 237.95,
+      "executionTimeMs": 280.58,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1332,7 +1332,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 479.81,
+      "executionTimeMs": 558.09,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1351,7 +1351,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 2349.8,
+      "executionTimeMs": 2387.51,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1370,7 +1370,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 260.27,
+      "executionTimeMs": 309.5,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1389,7 +1389,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 451.62,
+      "executionTimeMs": 457.39,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1409,7 +1409,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 3382.02,
+      "executionTimeMs": 3419.67,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1428,7 +1428,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 145.43,
+      "executionTimeMs": 163.71,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1447,7 +1447,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 395.91,
+      "executionTimeMs": 415.66,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1467,7 +1467,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 2429.18,
+      "executionTimeMs": 2535.61,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1486,7 +1486,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 261.71,
+      "executionTimeMs": 312.82,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1505,7 +1505,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 461.72,
+      "executionTimeMs": 530,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1524,7 +1524,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 1807.5,
+      "executionTimeMs": 1934.07,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1543,7 +1543,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 233.6,
+      "executionTimeMs": 273.86,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1562,7 +1562,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 437.2,
+      "executionTimeMs": 486.82,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1582,7 +1582,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 1833.11,
+      "executionTimeMs": 1973.47,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1601,7 +1601,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 236.68,
+      "executionTimeMs": 277.22,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1620,7 +1620,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 442.24,
+      "executionTimeMs": 493.18,
       "stdout": "31839939622\n41662374059",
       "stderr": "",
       "codeStats": {
@@ -1640,7 +1640,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 28.49,
+      "executionTimeMs": 35.34,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1659,7 +1659,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 7.25,
+      "executionTimeMs": 13.02,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1678,7 +1678,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 38.13,
+      "executionTimeMs": 45.11,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1697,7 +1697,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 21.39,
+      "executionTimeMs": 27.39,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1716,7 +1716,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 7.16,
+      "executionTimeMs": 12.98,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1735,7 +1735,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 32.99,
+      "executionTimeMs": 39.06,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1754,7 +1754,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 24.89,
+      "executionTimeMs": 31.09,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1773,7 +1773,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 7.18,
+      "executionTimeMs": 12.84,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1792,7 +1792,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 33.87,
+      "executionTimeMs": 40.09,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1811,7 +1811,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 21.5,
+      "executionTimeMs": 27.39,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1830,7 +1830,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 7.27,
+      "executionTimeMs": 13.12,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1849,7 +1849,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 32.96,
+      "executionTimeMs": 41.04,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1868,7 +1868,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 25.71,
+      "executionTimeMs": 32.26,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1887,7 +1887,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 7.03,
+      "executionTimeMs": 13.04,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1906,7 +1906,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 33.8,
+      "executionTimeMs": 40.85,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1925,7 +1925,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 33.61,
+      "executionTimeMs": 41.53,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1944,7 +1944,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 7.28,
+      "executionTimeMs": 12.98,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1963,7 +1963,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 32.91,
+      "executionTimeMs": 41.35,
       "stdout": "17144\n170371185255900",
       "stderr": "",
       "codeStats": {
@@ -1982,7 +1982,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 329.53,
+      "executionTimeMs": 381.38,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2001,7 +2001,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 10.99,
+      "executionTimeMs": 17.26,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2020,7 +2020,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 103.27,
+      "executionTimeMs": 107.92,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2039,7 +2039,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 359.1,
+      "executionTimeMs": 415.02,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2058,7 +2058,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 12.19,
+      "executionTimeMs": 18.19,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2077,7 +2077,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 76.49,
+      "executionTimeMs": 85.91,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2096,7 +2096,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 798.36,
+      "executionTimeMs": 821.47,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2115,7 +2115,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 12.78,
+      "executionTimeMs": 17.92,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2134,7 +2134,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 97.91,
+      "executionTimeMs": 104.24,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2153,7 +2153,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 439.35,
+      "executionTimeMs": 499.97,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2172,7 +2172,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 13.78,
+      "executionTimeMs": 19.33,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2191,7 +2191,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 111.43,
+      "executionTimeMs": 103.99,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2210,7 +2210,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 390.44,
+      "executionTimeMs": 491.41,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2229,7 +2229,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 14.11,
+      "executionTimeMs": 20.17,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2248,7 +2248,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 65.08,
+      "executionTimeMs": 75.89,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2267,7 +2267,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 54.6,
+      "executionTimeMs": 70.65,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2286,7 +2286,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 10.81,
+      "executionTimeMs": 16.93,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2305,7 +2305,7 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 67.17,
+      "executionTimeMs": 76.48,
       "stdout": "1445\n8317",
       "stderr": "",
       "codeStats": {
@@ -2324,12 +2324,12 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "executionTimeMs": 40.09,
-      "stdout": "607",
+      "executionTimeMs": 47.4,
+      "stdout": "607\n342433357244012",
       "stderr": "",
       "codeStats": {
         "fileCount": 1,
-        "totalLoc": 24
+        "totalLoc": 46
       },
       "baselineSolutionId": "cd7510fe166eb61c",
       "matchesBaseline": true
