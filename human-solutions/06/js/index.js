@@ -93,5 +93,5 @@ function solvePart2(input) {
 }
 
 
-console.log("Part 1:", solvePart1(input));
-console.log("Part 2:", solvePart2(input));
+console.log(solvePart1(input));
+console.log(solvePart2(input));

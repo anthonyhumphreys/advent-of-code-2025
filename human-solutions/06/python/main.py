@@ -97,5 +97,5 @@ def solve_part2(input_text: str) -> int:
     return total
 
 
-print("Part 1:", solve_part1(input_text))
-print("Part 2:", solve_part2(input_text))
+print(solve_part1(input_text))
+print(solve_part2(input_text))

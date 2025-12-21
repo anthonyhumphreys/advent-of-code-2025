@@ -112,6 +112,6 @@ fn main() {
     let input = fs::read_to_string("../../../inputs/06.txt").unwrap();
     let input = input.trim_end();
 
-    println!("Part 1: {}", solve_part1(input));
-    println!("Part 2: {}", solve_part2(input));
+    println!("{}", solve_part1(input));
+    println!("{}", solve_part2(input));
 }
