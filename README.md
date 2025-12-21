@@ -61,8 +61,9 @@ npm run add-day <day_number>
 This will create:
 - Directory structure in `human-solutions/{day}/` with js, python, and rust subfolders
 - Directory structure in `ai-solutions/{day}/` with model subfolders (composer-1, gemini-3-pro, etc.), each containing js, python, and rust subfolders
-- Template files for each language with boilerplate code
 - An empty input file at `inputs/{day}.txt`
+
+**Note:** Only directories are created - no template files are generated.
 
 See [scripts/README.md](scripts/README.md) for more details.
 
