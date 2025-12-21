@@ -21,3 +21,25 @@ const freshIngredients = ids.filter(id =>
 
 console.log(freshIngredients.length);
 
+ranges.sort((a, b) => a[0] - b[0]);
+
+const merged = [];
+
+for (const [start, end] of ranges) {
+  const last = merged[merged.length - 1];
+
+  if (!last || start > last[1] + 1) {
+    merged.push([start, end]);
+  } else {
+    last[1] = Math.max(last[1], end);
+  }
+}
+
+const totalFreshIds = merged.reduce(
+  (sum, [start, end]) => sum + (end - start + 1),
+  0
+);
+
+console.log(totalFreshIds);
+
+
